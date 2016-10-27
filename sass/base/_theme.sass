@@ -1,0 +1,74 @@
+// GLOBAL CLASSES
+.btn
+  +btn
+
+.btn-small
+  +btn-small
+
+//SITE-STYLES
+body
+  background: $off-white
+
+.site-container
+  max-width: 1350px
+  margin: 0 auto
+  background: $white
+  
+p
+  margin-top: 0
+a
+  +transition(color .2s)
+  color: $global-link-color
+  text-decoration: none
+  &:hover
+    +transition(color .2s)
+    color: darken($global-link-color, 10)
+img
+  vertical-align: bottom
+  max-width: 100%
+
+ul
+  margin: 0
+  padding: 0
+li
+  list-style: none
+
+b
+  font-weight: 900
+
+hr
+  margin: 1em 0
+  border: none
+  border-bottom: 1px solid
+  border-color: $gray-light
+  &.thick
+    border-width: 5px
+  &.narrow
+    margin: 20% auto
+  &.short
+    margin: .5em 0
+  &.tall
+    margin: 2em 0
+
+figure
+  margin: 0
+
+.page-section-title
+  margin: 1rem 0
+  padding: .5rem 0
+  border-top: 1px solid $gray-light
+  border-bottom: 1px solid $gray-light
+  text-align: center
+  font-weight: normal
+  font-size: 2em
+  &.small-title
+    font-size: .775em
+  &.as-script
+    font-family: $display
+
+.script-heading
+  font-family: $display
+  font-weight: normal
+  font-size: 1.125em
+  margin: 0 0 .5rem
+  color: $green

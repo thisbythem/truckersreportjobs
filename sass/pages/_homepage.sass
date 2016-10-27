@@ -1,0 +1,84 @@
+.homepage-section
+
+  &.homepage-callout-boxes
+    padding: 1rem 0 0
+    .callout-box
+      position: relative
+      display: block
+      padding: .5rem
+      background: $gray-lighter
+      background-size: cover !important
+      min-height: 340px
+      .callout-title
+        +transition(transform .3s)
+        +position(absolute, 1rem 1rem auto 1rem)
+        font-size: 2em
+        line-height: 1
+        letter-spacing: -.025em
+        color: $white
+        text-shadow: shade($brand-green, 65) 0 0 50px
+      .callout-content
+        +transition(background .3s)
+        +position(absolute, auto .5rem .5rem .5rem)
+        padding: .5rem
+        background: transparentize(shade($brand-green, 65), .65)
+        p
+          display: block
+          margin: 0
+          padding: 0 2px
+          line-height: 1
+          color: $white
+          text-shadow: shade($brand-green, 65) 0 0 50px
+
+    +media($smallScreenDown)
+      .callout-box:not(:last-child)
+        margin-bottom: 1rem
+
+    +media($smallScreenUp)
+      .callout-box
+        float: left
+        width: calc(100% / 3 - .5rem)
+        &:nth-child(2)
+          margin: 0 .75rem
+
+      .callout-box:hover
+        .callout-title
+          +transform(translateY(1rem))
+        .callout-content
+          background: transparentize(shade($brand-green, 65), .35)
+
+.homepage-section-target-callouts
+  background: $white
+  padding: 3rem 0
+
+.homepage-section-target-callout
+  display: block
+  text-align: center
+  color: $gray-darker
+  figure
+    margin-bottom: 1rem
+    img
+      height: 5em
+  h4
+    margin: 0 0 .25rem
+    font-family: $display
+    font-weight: normal
+    font-size: 1.5em
+  p
+    font-size: .775em
+    line-height: 1.2
+
+.homepage-section-story-callouts
+  +section-padding-sm
+  background: $off-white
+
+
+.homepage-section-newsletter
+  padding: 2rem 0
+  background: $brand-yellow
+  text-align: center
+
+.homepage-section-site-menu
+  +section-padding
+  background: $gray-light
+  text-align: center

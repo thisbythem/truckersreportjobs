@@ -1,0 +1,30 @@
+html
+  -webkit-font-smoothing: antialiased
+
+body
+  font: normal 100%/1.4 $body-font
+  color: $global-text-color
+
+h1, h2, h3, h4, h5, h6
+  font-family: $heading-font
+  font-weight: bold
+  line-height: 1.1
+
+h1, h2
+  letter-spacing: -.025em
+  
++media($smallScreenUp)
+  body
+    font-size: 105%
+
++media($mediumScreenUp)
+  body
+    font-size: 110%
+
++media($largeScreenUp)
+  body
+    font-size: 115%
+
++media($extraLargeScreenUp)
+  body
+    font-size: 120%
