@@ -1,0 +1,21 @@
+.rating-matrix
+  li
+    +clearfix
+    line-height: 1
+    border-radius: .15rem
+    &:first-of-type
+      padding-bottom: .5rem
+      border-bottom: 1px solid $gray-light
+
+    &:not(:first-of-type)
+      margin-top: .5rem
+      span
+        font-size: .675rem
+  span
+    @extend %small-heavy-caps
+    float: left
+    margin-top: .15rem
+  .rating
+    float: right
+    font-size: .775em
+    color: $gray-dark

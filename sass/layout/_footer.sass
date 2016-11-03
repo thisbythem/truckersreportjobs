@@ -1,17 +1,45 @@
 .site-footer
-  +last-p
-  padding: 2rem 0
-  background: shade($black, 55)
-  color: $gray-darker
-  font-size: .775em
-  line-height: 1.2
+  position: relative
+  overflow: hidden
+  z-index: 5
+  padding: 2rem 0 3rem
+  text-align: center
+  color: tint($base-theme-color, 30)
+  &::before
+    content: ""
+    +position(absolute, 0 auto auto 50%)
+    z-index: -1
+    +size(40em)
+    margin-left: -20em
+    background: darken($base-theme-color, 5)
+    border-radius: 50%
+
+  h3
+    margin: 3rem 0 2rem
+    text-transform: uppercase
+    color: tint($base-theme-color, 40)
+
+  h3 + p
+    margin: 0
+    font-size: .875em
+
+  .social-links
+    margin: 1.5rem 0
+    a
+      +link-color(tint($base-theme-color, 40))
+      margin: 0 .5rem
+      font-size: 2em
+      line-height: 1
+
 
   .footer-nav
-    margin-bottom: .5rem
+    a
+      +link-color(tint($base-theme-color, 30))
+      @extend %small-heavy-caps
+      display: inline-block
+      margin: 0 .5rem
 
-
-  +media($smallScreenUp)
-    text-align: right
-    .footer-nav
-      float: left
-      margin: 0
+  .copyright
+    @extend %small-heavy-caps
+    margin-top: 2rem
+    color: tint($base-theme-color, 15)

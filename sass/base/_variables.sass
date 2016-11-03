@@ -1,45 +1,53 @@
+// NEAT
+$max-width: 1350px
+
 // FONTS
 $serif: Georgia, serif
-$sans: "franklin-gothic-urw", Helvetica, sans-serif
-$display: "bistro-script-web", cursive
+$sans: "Roboto", Helvetica, sans-serif
+$display: "Roboto Condensed", Helvetica, sans-serif
 
 $body-font: $sans
-$heading-font: $sans
+$heading-font: $display
 
 // SHADES
 $true-black: #000000
-$black: #1c1815
+$black: #00162d
 $white: #ffffff
-$off-white: saturate(tint($black, 96), 0)
-$gray-lightest: saturate(tint($black, 92), 0)
-$gray-lighter: saturate(tint($black, 91), 0)
-$gray-light: desaturate(tint($black, 85), 0)
+$off-white: saturate(tint($black, 97), 10)
+$gray-lightest: saturate(tint($black, 95), 10)
+$gray-lighter: saturate(tint($black, 91), 10)
+$gray-light: desaturate(tint($black, 85), 10)
 $gray-medium: desaturate(tint($black, 60), 0)
 $gray-dark: desaturate(tint($black, 45), 0)
 $gray-darker: desaturate(tint($black, 30), 0)
 $gray-darkest: desaturate(tint($black, 20), 0)
 
 // COLORS
-$brand-orange: #E36626
-$brand-green: #2E7A3C
-$brand-brown: #3D352C
-$brand-yellow: #F1C049
+$brand-orange: #ff6602
+$brand-blue: #13406d
 
 $red: red
 $green: green
 $blue: #3A92AF
-$yellow: yellow
+$yellow: #F9C80E
 $orange: orange
 
 // SITE COLOR VARIABLES
 $global-link-color: $brand-orange
 $global-text-color: $gray-darker
+$base-theme-color: $brand-blue
 
 // BREAKPOINTS
-$smallScreenUp: new-breakpoint(min-width 544px)
-$smallScreenDown: new-breakpoint(max-width 544px)
-$mediumScreenUp: new-breakpoint(min-width 786px)
-$mediumScreenDown: new-breakpoint(max-width 768px)
-$largeScreenUp: new-breakpoint(min-width 992px)
-$largeScreenDown: new-breakpoint(max-width 992px)
-$extraLargeScreenUp: new-breakpoint(min-width 1200px)
+$tinyScreenUp: new-breakpoint(min-width 320px 4)
+$miniScreenDown: new-breakpoint(max-width 375px)
+$miniScreenUp: new-breakpoint(min-width 375px)
+$smallScreenUp: new-breakpoint(min-width 768px)
+$smallScreenDown: new-breakpoint(max-width 768px)
+$mediumScreenUp: new-breakpoint(min-width 980px)
+$mediumScreenDown: new-breakpoint(max-width 980px)
+$miniToMediumScreen: new-breakpoint(min-width 500px max-width 980px)
+$largeScreenUp: new-breakpoint(min-width 1120px)
+$hugeScreenUp: new-breakpoint(min-width 1300px)
+$maxScreenUp: new-breakpoint(min-width 1600px)
+
+$shortScreenUp: new-breakpoint(min-width 768px min-height 1000px)

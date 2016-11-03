@@ -1,0 +1,116 @@
+.company-block
+  +transition(transform .3s, filter .3s)
+  background: $white
+  margin-bottom: 1.75rem
+  box-shadow: transparentize($black, .65) 10px 0 50px 0
+  //+filter(drop-shadow(transparentize($black, .95) 7px 7px 0))
+  //border-radius: 5px
+  &:hover
+    +transform(translateY(-4px))
+    +filter(drop-shadow(transparentize($black, .95) 7px 11px 0))
+    footer .read-more
+      background: $brand-orange
+      color: $white
+
+  .link-wrap
+    display: block
+    color: $global-text-color
+
+  header
+    +row
+    padding: 1rem 1rem 0
+    .company-logo-rating
+      +row
+    img
+      max-height: 2.5rem
+    .company-name
+      display: table
+      width: 100%
+      min-height: 5rem
+      padding: .5rem 0
+    h3
+      display: table-cell
+      height: 100%
+      vertical-align: middle
+      margin: 0
+      font-size: 1.5rem
+      line-height: 1
+
+    .company-type
+      @extend %small-heavy-caps
+
+    .sub-group
+      +span-columns(6)
+      &:last-of-type
+        text-align: right
+
+    .company-rating-total
+      display: block
+      @extend %small-heavy-caps
+      color: $gray-medium
+
+  .company-review-block-review
+    padding: 1rem
+    border-top: 1px solid $gray-lighter
+    h5
+      @extend %small-heavy-caps
+      margin: .5rem 0
+      color: $gray-medium
+
+    +media($miniScreenDown)
+      padding: .5rem
+    +media($smallScreenDown)
+      +last-p
+      height: auto !important
+      padding: 1rem 1rem 0
+
+  .rating-wrap
+    margin-bottom: 1rem
+    padding: .5rem
+    background: $off-white
+    +media($miniScreenDown)
+      font-size: .775em
+    +media($smallScreenUp)
+      padding: 1rem
+
+  footer
+    display: table
+    width: 100%
+    margin-top: 1.5rem
+    padding: .5rem
+    border-top: 1px solid $gray-lighter
+    background: tint($off-white, 5)
+    //border-radius: 0 0 5px 5px
+    .sub-group
+      display: table-cell
+      vertical-align: middle
+    .company-type
+      @extend %small-heavy-caps
+      font-size: .675rem
+      margin: 0
+      line-height: 1
+      small
+        margin: 0 .15rem 0 .1rem
+        color: $gray-medium
+    .read-more
+      +transition(background .3s, color .2s)
+      display: block
+      float: right
+      padding: .5rem .75rem
+      font-size: .675rem
+      font-weight: 700
+      text-transform: uppercase
+      line-height: 1
+      background: $gray-lighter
+      color: $gray-dark
+
+
+  +media($largeScreenUp)
+    header
+      padding: 1.5rem 1.5rem 0
+
+    .company-review-block-review
+      padding: 0 1.5rem
+
+      .review-content
+        font-size: .775em

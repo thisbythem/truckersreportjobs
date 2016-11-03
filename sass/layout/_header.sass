@@ -1,0 +1,44 @@
+.site-header
+  padding: 1rem 0
+  color: tint($base-theme-color, 25)
+
+
+.site-logo
+  img
+    +filter(drop-shadow(transparentize($black, .75) 1px 1px 0))
+    +size(auto 3rem)
+    margin-bottom: .5rem
+    +media($smallScreenUp)
+      +size(auto 3.5rem)
+      margin: 0
+
+.site-nav,
+.site-header-user-wrap
+  @extend %small-heavy-caps
+
+
+// LAYOUT
+.site-header
+
+  +media($smallScreenUp)
+    .sub-group
+      float: right
+      margin-top: 1rem
+
+.site-nav,
+.site-header-user-wrap,
+.site-header-search
+  display: inline-block
+  vertical-align: middle
+  margin-right: .5rem
+  small
+    margin: 0 .25rem
+  a
+    +link-color(tint($base-theme-color, 65))
+  +media($smallScreenUp)
+    margin-left: 1.5rem
+
+// HIDE SEARCH ON HOMEPAGE
+.homepage .site-header
+  .site-header-search
+    display: none

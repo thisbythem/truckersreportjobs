@@ -1,3 +1,9 @@
+=omega-reset($nth)
+  &:nth-child(#{$nth})
+    margin-right: flex-gutter()
+  &:nth-child(#{$nth}+1)
+    clear: none
+    
 =btn($btn-bg: $global-link-color)
   +transition(background-color .2s)
   @extend %btn-base
