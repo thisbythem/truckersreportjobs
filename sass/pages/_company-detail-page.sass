@@ -1,0 +1,193 @@
+.company-detail-page
+
+  .company-detail-section
+    h4
+      +clearfix
+      margin: 0 0 1rem
+      font-size: 1rem
+      font-weight: 700
+      line-height: 1
+      text-transform: uppercase
+      color: $brand-blue
+      i
+        position: relative
+        margin-right: .15rem
+        font-size: .5em
+        +transform(translateY(-.25em))
+      a
+        display: inline-block
+        float: right
+        margin-top: .225em
+        font-size: .775em
+        +link-color($gray-medium)
+        i
+          margin: 0
+          +transform(translateY(-1px))
+
+
+  .company-detail-header
+    +section-padding-sm
+
+    .company-logo
+      max-height: 3rem
+      margin-bottom: 1rem
+
+    h2
+      margin: 0 0 1rem
+      font-weight: 700
+      line-height: 1
+      color: $brand-blue
+
+    .rating
+      color: $yellow
+
+    .company-rating-total
+      display: block
+      margin-top: .25rem
+      text-align: right
+      font-size: .875em
+      font-style: italic
+      color: $gray-medium
+
+    p
+      margin: .75rem 0 0
+      line-height: 1
+      i
+        margin-right: .25rem
+        color: $gray-medium
+      span
+        color: $brand-blue
+
+    .company-phone span
+      font-size: 1.275em
+      font-weight: 700
+      letter-spacing: -.025em
+      i, span
+        display: inline-block
+        vertical-align: bottom
+
+    .company-trailer-type span
+      @extend %small-heavy-caps
+
+    .rating-entry-wrap
+      color: $brand-blue
+      li:first-child
+        border-color: $brand-blue
+
+
+    +media($smallScreenDown)
+      .rating-entry-wrap
+        margin-top: 1rem
+        font-size: 1.175em
+
+    +media($smallScreenUp)
+      h2
+        font-size: 3em
+      .sub-group
+        &:first-child
+          +span-columns(7)
+          padding-right: 1rem
+        &:last-child
+          +span-columns(5)
+          padding-left: 1rem
+
+      .rating-entry-wrap
+        margin-top: 1rem
+        font-size: 1.375em
+
+      .company-info
+        figure
+          +span-columns(4)
+          padding: 0 1rem
+        .company-name-contact
+          +span-columns(8)
+
+      .company-logo
+        max-height: none
+
+
+  .company-detail-anchor-nav
+    padding: 1rem 0
+    border-top: 1px solid $gray-light
+    border-bottom: 1px solid $gray-light
+    background: $off-white
+    white-space: nowrap
+    .anchor-nav
+      @extend %small-heavy-caps
+      line-height: 1
+    .actions
+      a
+        +btn
+        +btn-small
+    +media($smallScreenDown)
+      .anchor-nav
+        margin-bottom: 1rem
+        span
+          display: block
+          margin-bottom: .5rem
+        a
+          margin-right: .25rem
+
+    +media($smallScreenUp)
+      .anchor-nav, .actions
+        display: inline-block
+        vertical-align: middle
+        white-space: normal
+        width: 50%
+      .actions
+        text-align: right
+        a
+          margin-left: .5rem
+      .anchor-nav
+        a, span
+          margin-right: 1rem
+
+  .company-detail-profile-media
+    +section-padding-sm
+
+    .company-logo
+      max-height: 3rem
+      margin: 1rem 0
+    .company-videos-wrap
+      a
+        +span-columns(6)
+        +omega(2n)
+        margin-bottom: 1rem
+        img
+          +add-box-shadow(5px)
+      span
+        display: block
+        margin-top: .75rem
+        font-size: .775em
+        font-style: italic
+        line-height: 1
+        color: $gray-medium
+    .company-images,
+    .company-videos
+      margin-top: 1rem
+
+    .company-images-wrap
+      a
+        +span-columns(4)
+        +omega(3n)
+        img
+          +add-box-shadow(5px)
+
+    +media($mediumScreenUp)
+      .sub-group
+        +span-columns(5.75)
+        &:last-child
+          +shift(.5)
+      .company-videos
+        margin: 0
+      .company-images-wrap
+        a
+          +omega-reset(3n)
+          +span-columns(3)
+          +omega(4n)
+
+  .company-detail-reivews,
+  .company-detail-discussion,
+  .company-detail-job-postings    
+    +section-padding-sm
+    border-top: 1px solid $gray-light

@@ -1,0 +1,33 @@
+.company-detail-job-entry
+  max-width: 50em
+  margin: 0 auto
+  padding: .5rem
+  margin-top: 1.5rem
+  border: 1px solid $gray-light
+  box-shadow: transparentize($black, .95) 10px 0 50px 0
+
+  span
+    display: block
+    line-height: 1.1
+    &:first-of-type
+      color: $brand-blue
+    &:last-of-type
+      @extend %small-heavy-caps
+      margin-top: .5rem
+
+  +media($smallScreenUp)
+    padding: 0
+    .job-link
+      display: table
+      width: 100%
+      vertical-align: middle
+      span
+        display: table-cell
+        padding: 1rem
+        &:first-of-type
+          color: $brand-blue
+        &:last-of-type
+          width: 8rem
+          text-align: center
+          background: $brand-orange
+          color: $white

@@ -2,12 +2,10 @@
   +transition(transform .3s, filter .3s)
   background: $white
   margin-bottom: 1.75rem
-  box-shadow: transparentize($black, .65) 10px 0 50px 0
-  //+filter(drop-shadow(transparentize($black, .95) 7px 7px 0))
-  //border-radius: 5px
+  border: 1px solid $gray-lighter
+  box-shadow: transparentize($black, .9) 10px 0 50px 0
   &:hover
     +transform(translateY(-4px))
-    +filter(drop-shadow(transparentize($black, .95) 7px 11px 0))
     footer .read-more
       background: $brand-orange
       color: $white
@@ -64,7 +62,7 @@
       height: auto !important
       padding: 1rem 1rem 0
 
-  .rating-wrap
+  .review-entry-rating-wrap
     margin-bottom: 1rem
     padding: .5rem
     background: $off-white

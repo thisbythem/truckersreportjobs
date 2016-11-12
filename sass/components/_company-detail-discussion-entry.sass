@@ -1,0 +1,61 @@
+.company-detail-discussion-entry
+  +last-p
+  max-width: 40em
+  margin: 2rem auto 0
+
+  .discussion-author
+    @extend %small-heavy-caps
+    span
+      display: block
+      margin-top: .5rem
+  .discussion-content
+    p
+      font-size: .875em
+
+  .discussion-author-image
+    img
+      max-height: 3rem
+      border-radius: 50%
+      overflow: hidden
+
+  .discussion-author-name
+    color: $brand-blue
+  .entry-post-date
+    color: $gray-medium
+
+  .company-detail-discussion-entry-footer
+    @extend %small-heavy-caps
+
+
+  .entry-forum-link
+    +link-color($gray-medium)
+    @extend %small-heavy-caps
+    float: right
+    margin-top: 1rem
+
+  +media($smallScreenDown)
+    .discussion-author
+      margin-bottom: 1rem
+
+    .discussion-author-image,
+    .discussion-author span
+      display: inline-block
+      vertical-align: middle
+      margin-right: .5rem
+
+
+  +media($smallScreenUp)
+    hr
+      margin-bottom: 2rem
+
+    .discussion-author-image
+      img
+        max-height: 4rem
+
+    .sub-group
+      &:first-child
+        +span-columns(3)
+        padding: 0 1rem
+        text-align: center
+      &:last-child
+        +span-columns(9)

@@ -1,0 +1,97 @@
+.company-detail-review-entry,
+.company-detail-salary-entry
+  +row
+  +last-p
+  margin-top: 2rem
+  border: 1px solid $gray-light
+  box-shadow: transparentize($black, .9) 10px 0 50px 0
+
+  .content-wrap
+    padding: 1rem
+
+  .rating-entry-wrap
+    font-size: 1.175em
+    li:first-child
+      color: $brand-blue
+    .rating
+      color: $yellow
+
+  dl
+    margin: 0
+    &:last-child
+      margin-top: 1rem
+  dt
+    @extend %small-heavy-caps
+    margin-bottom: .5rem
+    color: $brand-blue
+  dd
+    margin: 0
+    font-size: .875em
+    line-height: 1.2
+    font-style: italic
+
+  .entry-review-content
+    p
+      font-size: .875em
+
+  .company-detail-review-entry-footer,
+  .company-detail-salary-entry-footer
+    +clearfix
+    padding: .5rem 1rem
+    background: $off-white
+    border-top: 1px solid $gray-light
+    @extend %small-heavy-caps
+    color: $gray-medium
+
+  +media($mediumScreenDown)
+    .entry-pros-cons
+      margin: 1rem 0
+    .company-detail-review-entry-footer,
+    .company-detail-salary-entry-footer
+      span
+        display: block
+
+  +media($mediumScreenUp)
+    .entry-rating
+      +span-columns(4)
+    .entry-pros-cons
+      +span-columns(2.5)
+    .entry-pros-cons
+      +span-columns(2.5)
+
+    .content-wrap
+      padding: 2rem
+    .entry-pros-cons
+      dl
+        padding: 0 .5rem
+      dd
+        font-size: .775em
+
+    .entry-currently-employed
+      float: right
+
+/// SALARY ELEMENTS
+.company-detail-salary-entry
+  .salary-details
+    dl
+      +span-columns(6)
+      +omega(2n)
+      margin-top: 0
+      margin-bottom: 1rem
+      &:last-child
+        margin-bottom: 0
+    dd
+      font-style: normal
+    +media($smallScreenUp)
+      dl
+        +omega-reset(2n)
+        +span-columns(2 of 10)
+        margin-bottom: 0
+      dd
+
+
+/// REVIEW ENTRY ELEMENTS
+.company-detail-review-entry
+  +media($mediumScreenDown)
+    max-width: 32em
+    margin: 1.5rem auto 0

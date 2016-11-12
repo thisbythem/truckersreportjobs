@@ -1,5 +1,5 @@
 <div class="company-block">
-  <a href="/" class="link-wrap">
+  <a href="/company-detail.php" class="link-wrap">
 
     <header>
       <div class="company-logo-rating">
@@ -7,12 +7,14 @@
           <img src="images/foley_services_logo.png" />
         </div>
         <div class="sub-group">
-          <div class="rating">
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
+          <div class="rating-wrap">
+            <div class="rating-stars">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+            </div>
           </div>
           <span class="company-rating-total"><small>37 Reviews</small></span>
         </div>
@@ -24,7 +26,7 @@
 
     <div class="company-review-block-review equal-height-div">
       <h5>Latest Review</h5>
-      <div class="rating-wrap">
+      <div class="review-entry-rating-wrap">
         <?php include("include/rating-matrix.php"); ?>
       </div>
       <p class="review-content">

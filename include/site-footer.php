@@ -1,8 +1,8 @@
 <footer class="site-footer">
-  <div class="container narrow">
+  <div class="container">
     <div class="row">
       <div class="sub-group">
-        <h3 class="page-section-title add-line on-theme-color"><span>About Truckers Report Job Reviews</span></h3>
+        <h3>About Truckers Report Job Reviews</h3>
         <p>Truckers Report Jobs is your free inside look at jobs and companies. Salary details, company reviews, and interview questions — all posted anonymously by employees and job seekers.</p>
       </div>
       <div class="sub-group social-links">

@@ -3,7 +3,7 @@
   +outer-container
   padding: 0 1rem
   &.medium
-    max-width: 46em
+    max-width: 50em
   &.narrow
     max-width: 38em
   +media($miniScreenDown)
@@ -21,16 +21,16 @@
 
 //SITE-STYLES
 body
-  background: $brand-blue
-  +linear-gradient(shade($brand-blue, 20), $brand-blue)
-
-body.homepage
-  //+linear-gradient($off-white, $white)
+  background: $off-white
+  +linear-gradient($off-white, $white)
 
 .site-container
   position: relative
   max-width: 1350px
   margin: 0 auto
+  background: $white
+  border-left: 1px solid $gray-light
+  border-right: 1px solid $gray-light
 
 p
   margin-top: 0
@@ -73,10 +73,8 @@ figure
 
 .page-section-title
   position: relative
-  margin: 1rem 0 1.5rem
-  font-size: .675em
+  margin: 1rem 0
   text-align: center
-  text-transform: uppercase
   letter-spacing: .025rem
   +media($miniScreenDown)
     span
@@ -85,31 +83,15 @@ figure
       display: block
       margin-top: .25rem
   +media($smallScreenUp)
-    margin: 2rem 0 3rem
-    font-size: .875em
+    margin: 2rem 0
   &.small-title
     font-size: .775em
-  &.add-line
-    span
-      position: relative
-      z-index: 1
-      padding: .25rem 1rem
-      background: $off-white
-    &:before
-      +position(absolute, 50% 0 auto 0)
-      content: ""
-      +size(100% 1px)
-      background: $gray-light
   &.with-link
     a
       &::before
         content: "•"
-        margin: 0 .5rem
-        color: tint($base-theme-color, 5)
-  &.on-theme-color.add-line
-    color: tint($base-theme-color, 30)
-    span
-      background: shade($base-theme-color, 5)
-      border: 1px solid tint($base-theme-color, 5)
-    &::before
-      background: tint($base-theme-color, 5)
+        margin: 0 1rem 0 .5rem
+        color: $gray-medium
+      i
+        font-size: 1.25rem
+        +transform(translateY(-2px))

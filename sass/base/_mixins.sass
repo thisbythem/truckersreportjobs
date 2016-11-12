@@ -3,7 +3,7 @@
     margin-right: flex-gutter()
   &:nth-child(#{$nth}+1)
     clear: none
-    
+
 =btn($btn-bg: $global-link-color)
   +transition(background-color .2s)
   @extend %btn-base
@@ -57,10 +57,18 @@
       padding-top: $top-pad
 
 =section-padding-sm
-  padding: 1.5rem 0
+  padding: 1.25rem 0
   +media($smallScreenUp)
     padding: 3.5rem 0
+
+=section-padding-xsm
+  padding: 1rem 0
+  +media($smallScreenUp)
+    padding: 2rem 0
 
 =last-p
   p:last-of-type
     margin-bottom: 0
+
+=add-box-shadow($distance)
+  box-shadow: transparentize($black, .9) $distance $distance 0 0

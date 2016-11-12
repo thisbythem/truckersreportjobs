@@ -1,11 +1,12 @@
 .site-header
-  padding: 1rem 0
-  color: tint($base-theme-color, 25)
+  +clearfix
+  padding: 1rem
+  color: $gray-medium
+  border-bottom: 1px solid $gray-light
 
 
 .site-logo
   img
-    +filter(drop-shadow(transparentize($black, .75) 1px 1px 0))
     +size(auto 3rem)
     margin-bottom: .5rem
     +media($smallScreenUp)
@@ -16,6 +17,19 @@
 .site-header-user-wrap
   @extend %small-heavy-caps
 
+.site-header-search
+  form
+    position: relative
+
+  input[type="text"]
+    width: 100%
+    padding-right: 1.5rem
+
+  .fa-search
+    display: block
+    +position(absolute, .5rem .5rem auto auto)
+    font-size: 1rem
+    color: $brand-orange
 
 // LAYOUT
 .site-header
@@ -34,7 +48,6 @@
   small
     margin: 0 .25rem
   a
-    +link-color(tint($base-theme-color, 65))
   +media($smallScreenUp)
     margin-left: 1.5rem
 

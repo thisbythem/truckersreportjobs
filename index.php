@@ -21,7 +21,7 @@
 
     <div class="homepage-section homepage-lastest-reviews">
       <div class="container">
-        <h2 class="page-section-title with-link add-line on-theme-color"><span>Recently Reviewed Companies <a href="/">All Companies <i class="fa fa-arrow-circle-right"></i></a></span></h2>
+        <h3 class="page-section-title with-link"><span>Recently Reviewed Companies <a href="/">All Companies <i class="fa fa-arrow-circle-right"></i></a></span></h3>
         <div class="row equal-height-wrap">
           <?php include("include/company-review-block-1.php"); ?>
           <?php include("include/company-review-block-2.php"); ?>

@@ -2,22 +2,16 @@
   position: relative
   overflow: hidden
   z-index: 5
-  padding: 2rem 0 3rem
+  margin-top: 2rem
+  padding: 3rem 0
+  background: $brand-blue
   text-align: center
-  color: tint($base-theme-color, 30)
-  &::before
-    content: ""
-    +position(absolute, 0 auto auto 50%)
-    z-index: -1
-    +size(40em)
-    margin-left: -20em
-    background: darken($base-theme-color, 5)
-    border-radius: 50%
+  color: tint($brand-blue, 45)
 
   h3
-    margin: 3rem 0 2rem
+    margin: 0 0 2rem
     text-transform: uppercase
-    color: tint($base-theme-color, 40)
+    color: tint($brand-blue, 85)
 
   h3 + p
     margin: 0
@@ -26,15 +20,14 @@
   .social-links
     margin: 1.5rem 0
     a
-      +link-color(tint($base-theme-color, 40))
-      margin: 0 .5rem
+      +link-color(tint($brand-blue, 60))
+      margin: 0 1rem
       font-size: 2em
       line-height: 1
 
-
   .footer-nav
     a
-      +link-color(tint($base-theme-color, 30))
+      +link-color(tint($brand-blue, 60))
       @extend %small-heavy-caps
       display: inline-block
       margin: 0 .5rem
@@ -42,4 +35,19 @@
   .copyright
     @extend %small-heavy-caps
     margin-top: 2rem
-    color: tint($base-theme-color, 15)
+    color: (tint($brand-blue, 20))
+
+  +media($smallScreenUp)
+    text-align: left
+
+    .sub-group
+      +span-columns(6)
+      &:last-child
+        +span-columns(3)
+        +shift(3)
+        text-align: right
+
+    .footer-nav
+      margin-top: 1rem
+      a
+        margin: 0 1rem 0 0
