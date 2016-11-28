@@ -3,6 +3,7 @@
   padding: 1rem
   color: $gray-medium
   border-bottom: 1px solid $gray-light
+  background: $white
 
 
 .site-logo
@@ -23,7 +24,7 @@
 
   input[type="text"]
     width: 100%
-    padding-right: 1.5rem
+    padding: .25rem 1.5rem .25rem .25rem
 
   .fa-search
     display: block
@@ -45,11 +46,13 @@
   display: inline-block
   vertical-align: middle
   margin-right: .5rem
-  small
-    margin: 0 .25rem
   a
   +media($smallScreenUp)
     margin-left: 1.5rem
+
+.site-header-user-wrap
+  small
+    margin: 0 .25rem
 
 // HIDE SEARCH ON HOMEPAGE
 .homepage .site-header

@@ -30,7 +30,7 @@
         <?php include("include/rating-matrix.php"); ?>
       </div>
       <p class="review-content">
-        I was driving for H&W when I became very sick . I had to come out of the truck because I had gotten to the point in my disease I was becoming a road danger. . I was very tired and weak like any good company H&W thinks safety and workers health first. H&W treated me better than any company I'd ever driven for...
+        I was driving for HW when I became very sick . I had to come out of the truck because I had gotten to the point in my disease I was becoming a road danger. . I was very tired and weak like any good company HW thinks safety and workers health first. HW treated me better than any company I'd ever driven for...
       </p>
     </div>
     <footer>

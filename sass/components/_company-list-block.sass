@@ -1,0 +1,71 @@
+.company-list-block
+  +transition(transform .3s, filter .3s)
+  padding: 1rem
+  background: $white
+  margin-bottom: 1.25rem
+  border: 1px solid $gray-lighter
+  box-shadow: transparentize($black, .9) 10px 0 50px 0
+  &:last-of-type
+    margin-bottom: 0
+  &:hover
+    +transform(translateY(-4px))
+    .read-more
+      background: $brand-orange
+      color: $white
+
+  .link-wrap
+    +clearfix
+    display: block
+
+  .read-more
+    +transition(color .3s, background .3s)
+    display: block
+    @extend %small-heavy-caps
+    padding: .5rem 0
+    line-height: 1
+    text-align: center
+    background: $gray-lighter
+    color: $gray-medium
+
+  .company-rating-total
+    display: block
+    @extend %small-heavy-caps
+    color: $gray-medium
+
+  +media($smallScreenDown)
+    +clearfix
+    max-width: 24em
+    margin: 0 auto 1.5rem
+    .company-logo
+      max-height: 1.5rem
+
+    h3
+      margin: .75rem 0 .25rem
+
+    .sub-group
+      &:not(:first-child)
+        float: left
+        width: 50%
+
+    .read-more
+      margin-top: .75rem
+
+  +media($smallScreenUp)
+    padding: 1.5rem 2rem
+    white-space: nowrap
+    .company-logo
+      max-height: 2rem
+
+    .sub-group
+      display: inline-block
+      vertical-align: middle
+      width: 9rem
+      &:first-child
+        width: calc(100% - 18rem)
+        figure, h3
+          display: inline-block
+          vertical-align: middle
+        figure
+          width: 7em
+        h3
+          margin: 0 0 0 1rem

@@ -23,6 +23,20 @@
   font-size: .675em
   font-weight: 700
   text-transform: uppercase
-  
+
 %basic-box-shadow
   box-shadow: transparentize($black, .9) 10px 10px 0 -3px
+
+%bullet-list-style
+  position: relative
+  margin-bottom: .75rem
+  padding-left: 1rem
+  font-size: .925em
+  line-height: 1.1
+  &:last-of-type
+    margin-bottom: 0
+  &::before
+    content: "•"
+    +position(absolute, -.25rem auto auto 0 )
+    font-size: 1.5em
+    color: $brand-blue

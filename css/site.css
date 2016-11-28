@@ -482,7 +482,7 @@ th {
   max-width: 100%;
   height: auto; }
 
-.btn, .homepage-section.homepage-hero .action-callouts a, .company-detail-page .company-detail-anchor-nav .actions a {
+.btn, .view-more-wrap a, input[type="submit"], button[type="submit"], .homepage-section.homepage-hero .action-callouts a, .company-detail-page .company-detail-anchor-nav .actions a {
   display: inline-block;
   padding: 1.25em 2.25em;
   color: #fff;
@@ -493,20 +493,38 @@ th {
   letter-spacing: 0.025em;
   text-transform: uppercase;
   border: none; }
-  .btn:hover, .homepage-section.homepage-hero .action-callouts a:hover, .company-detail-page .company-detail-anchor-nav .actions a:hover {
+  .btn:hover, .view-more-wrap a:hover, input[type="submit"]:hover, button[type="submit"]:hover, .homepage-section.homepage-hero .action-callouts a:hover, .company-detail-page .company-detail-anchor-nav .actions a:hover {
     color: #fff; }
-  .btn:focus, .homepage-section.homepage-hero .action-callouts a:focus, .company-detail-page .company-detail-anchor-nav .actions a:focus, .btn:active, .homepage-section.homepage-hero .action-callouts a:active, .company-detail-page .company-detail-anchor-nav .actions a:active {
+  .btn:focus, .view-more-wrap a:focus, input[type="submit"]:focus, button[type="submit"]:focus, .homepage-section.homepage-hero .action-callouts a:focus, .company-detail-page .company-detail-anchor-nav .actions a:focus, .btn:active, .view-more-wrap a:active, input[type="submit"]:active, button[type="submit"]:active, .homepage-section.homepage-hero .action-callouts a:active, .company-detail-page .company-detail-anchor-nav .actions a:active {
     outline: none; }
 
 .company-block header .company-type, .company-block header .company-rating-total, .company-block .company-review-block-review h5, .company-block footer .company-type, .rating-matrix span, .company-detail-review-entry dt,
 .company-detail-salary-entry dt, .company-detail-review-entry .company-detail-review-entry-footer,
 .company-detail-review-entry .company-detail-salary-entry-footer,
 .company-detail-salary-entry .company-detail-review-entry-footer,
-.company-detail-salary-entry .company-detail-salary-entry-footer, .company-detail-discussion-entry .discussion-author, .company-detail-discussion-entry .company-detail-discussion-entry-footer, .company-detail-discussion-entry .entry-forum-link, .company-detail-job-entry span:last-of-type, .site-nav,
-.site-header-user-wrap, .site-footer .footer-nav a, .site-footer .copyright, .company-detail-page .company-detail-header .company-trailer-type span, .company-detail-page .company-detail-anchor-nav .anchor-nav {
+.company-detail-salary-entry .company-detail-salary-entry-footer, .company-detail-discussion-entry .discussion-author, .company-detail-discussion-entry .company-detail-discussion-entry-footer, .company-detail-discussion-entry .entry-forum-link, .company-detail-job-entry span:last-of-type, .nav-search-results small, .company-list-block .read-more, .company-list-block .company-rating-total, .form-label-small, .form-add-review-salary label, .form-add-review-salary h5, .user-entry-form .remember-me, .user-entry-form .form-links a, .site-nav,
+.site-header-user-wrap, .site-footer .footer-nav a, .site-footer .copyright, .company-detail-page .company-detail-header .company-trailer-type span, .company-detail-page .company-detail-anchor-nav .anchor-nav, .all-companies-list-header form label {
   font-size: 0.675em;
   font-weight: 700;
   text-transform: uppercase; }
+
+.form-errors li, .company-detail-page .company-detail-profile-salary li, .basic-page-wrap li {
+  position: relative;
+  margin-bottom: 0.75rem;
+  padding-left: 1rem;
+  font-size: 0.925em;
+  line-height: 1.1; }
+  .form-errors li:last-of-type, .company-detail-page .company-detail-profile-salary li:last-of-type, .basic-page-wrap li:last-of-type {
+    margin-bottom: 0; }
+  .form-errors li::before, .company-detail-page .company-detail-profile-salary li::before, .basic-page-wrap li::before {
+    content: "•";
+    position: absolute;
+    top: -0.25rem;
+    right: auto;
+    bottom: auto;
+    left: 0;
+    font-size: 1.5em;
+    color: #13406d; }
 
 html {
   -webkit-font-smoothing: antialiased; }
@@ -565,6 +583,9 @@ h3 {
   @media screen and (max-width: 375px) {
     .container {
       padding: 0.5rem; } }
+  @media screen and (min-width: 768px) {
+    .container {
+      padding: 0 1.5rem; } }
 
 .btn {
   -webkit-transition: background-color 0.2s;
@@ -593,6 +614,8 @@ body {
   background-color: #f8f8f8;
   background-image: -webkit-linear-gradient(#f8f8f8, #ffffff);
   background-image: linear-gradient(#f8f8f8, #ffffff); }
+  body.add-review .site-container {
+    background: #f8f8f8; }
 
 .site-container {
   position: relative;
@@ -647,6 +670,9 @@ hr {
 
 figure {
   margin: 0; }
+
+.page-title {
+  color: #13406d; }
 
 .page-section-title {
   position: relative;
@@ -1063,10 +1089,445 @@ figure {
             background: #ff6602;
             color: #ffffff; } }
 
+.view-more-wrap {
+  text-align: center;
+  padding: 2rem 0 0; }
+  .view-more-wrap a {
+    -webkit-transition: background-color 0.2s;
+    -moz-transition: background-color 0.2s;
+    transition: background-color 0.2s;
+    background-color: #9fa3a7;
+    padding: 0.75em 1.5em;
+    font-size: 0.675em; }
+    .view-more-wrap a:hover {
+      -webkit-transition: background-color 0.2s;
+      -moz-transition: background-color 0.2s;
+      transition: background-color 0.2s;
+      background-color: #adb1b4; }
+
+.site-search {
+  position: relative; }
+
+.nav-search-results {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  bottom: auto;
+  left: 0;
+  z-index: 100;
+  background: #ffffff;
+  border: 1px solid #dbddde;
+  border-top: none;
+  box-shadow: rgba(15, 25, 36, 0.1) 3px 3px 0 0, rgba(15, 25, 36, 0.1) 0 15px 20px 0; }
+  .nav-search-results.is-open {
+    display: block; }
+  .nav-search-results li {
+    line-height: 1;
+    border-bottom: 1px solid #e9eaeb; }
+    .nav-search-results li:last-child {
+      border: none; }
+  .nav-search-results span, .nav-search-results small {
+    display: block; }
+  .nav-search-results small {
+    margin-top: 0.25rem;
+    color: #7b8187; }
+  .nav-search-results a {
+    -webkit-transition: color 0.3s, background 0.3s;
+    -moz-transition: color 0.3s, background 0.3s;
+    transition: color 0.3s, background 0.3s;
+    display: block;
+    padding: 0.5rem;
+    font-size: 0.775em;
+    line-height: 1.1;
+    color: #13406d; }
+    .nav-search-results a:hover {
+      background: #f8f8f8;
+      color: #ff6602; }
+  .nav-search-results.search-results-wide {
+    text-align: left; }
+    .nav-search-results.search-results-wide a {
+      padding: 0.75rem;
+      font-size: 0.925em; }
+      .nav-search-results.search-results-wide a:after {
+        content: "";
+        display: table;
+        clear: both; }
+    .nav-search-results.search-results-wide span {
+      float: left; }
+    .nav-search-results.search-results-wide small {
+      float: right;
+      color: #9fa3a7; }
+
+.company-list-block {
+  -webkit-transition: -webkit-transform 0.3s, filter 0.3s;
+  -moz-transition: -moz-transform 0.3s, filter 0.3s;
+  transition: transform 0.3s, filter 0.3s;
+  padding: 1rem;
+  background: #ffffff;
+  margin-bottom: 1.25rem;
+  border: 1px solid #e9eaeb;
+  box-shadow: rgba(15, 25, 36, 0.1) 10px 0 50px 0; }
+  .company-list-block:last-of-type {
+    margin-bottom: 0; }
+  .company-list-block:hover {
+    -webkit-transform: translateY(-4px);
+    -moz-transform: translateY(-4px);
+    -ms-transform: translateY(-4px);
+    -o-transform: translateY(-4px);
+    transform: translateY(-4px); }
+    .company-list-block:hover .read-more {
+      background: #ff6602;
+      color: #ffffff; }
+  .company-list-block .link-wrap {
+    display: block; }
+    .company-list-block .link-wrap:after {
+      content: "";
+      display: table;
+      clear: both; }
+  .company-list-block .read-more {
+    -webkit-transition: color 0.3s, background 0.3s;
+    -moz-transition: color 0.3s, background 0.3s;
+    transition: color 0.3s, background 0.3s;
+    display: block;
+    padding: 0.5rem 0;
+    line-height: 1;
+    text-align: center;
+    background: #e9eaeb;
+    color: #9fa3a7; }
+  .company-list-block .company-rating-total {
+    display: block;
+    color: #9fa3a7; }
+  @media screen and (max-width: 768px) {
+    .company-list-block {
+      max-width: 24em;
+      margin: 0 auto 1.5rem; }
+      .company-list-block:after {
+        content: "";
+        display: table;
+        clear: both; }
+      .company-list-block .company-logo {
+        max-height: 1.5rem; }
+      .company-list-block h3 {
+        margin: 0.75rem 0 0.25rem; }
+      .company-list-block .sub-group:not(:first-child) {
+        float: left;
+        width: 50%; }
+      .company-list-block .read-more {
+        margin-top: 0.75rem; } }
+  @media screen and (min-width: 768px) {
+    .company-list-block {
+      padding: 1.5rem 2rem;
+      white-space: nowrap; }
+      .company-list-block .company-logo {
+        max-height: 2rem; }
+      .company-list-block .sub-group {
+        display: inline-block;
+        vertical-align: middle;
+        width: 9rem; }
+        .company-list-block .sub-group:first-child {
+          width: calc(100% - 18rem); }
+          .company-list-block .sub-group:first-child figure, .company-list-block .sub-group:first-child h3 {
+            display: inline-block;
+            vertical-align: middle; }
+          .company-list-block .sub-group:first-child figure {
+            width: 7em; }
+          .company-list-block .sub-group:first-child h3 {
+            margin: 0 0 0 1rem; } }
+
+fieldset {
+  display: block;
+  border: none;
+  margin: 0;
+  padding: 0; }
+  fieldset:after {
+    content: "";
+    display: table;
+    clear: both; }
+
+input[type="text"], input[type="tel"], input[type="email"], textarea {
+  -webkit-transition: border-color 0.2s, box-shadow 0.2s;
+  -moz-transition: border-color 0.2s, box-shadow 0.2s;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  width: 100%;
+  padding: 0.5em;
+  font-size: 0.875em;
+  border: 1px solid #dbddde;
+  border-radius: 0;
+  background: #ffffff;
+  color: #0f1924; }
+  input[type="text"]:active, input[type="text"]:focus, input[type="tel"]:active, input[type="tel"]:focus, input[type="email"]:active, input[type="email"]:focus, textarea:active, textarea:focus {
+    outline: none; }
+  input[type="text"]:focus, input[type="tel"]:focus, input[type="email"]:focus, textarea:focus {
+    border-color: #ff6602; }
+
+input[type="radio"], input[type="checkbox"] {
+  display: inline-block;
+  margin: 0 0.25em 0 0; }
+  @media screen and (min-width: 768px) {
+    input[type="radio"], input[type="checkbox"] {
+      margin: 0.4em 0.25em 0 0; } }
+
+input[type="submit"], button[type="submit"] {
+  -webkit-transition: background-color 0.2s;
+  -moz-transition: background-color 0.2s;
+  transition: background-color 0.2s;
+  background-color: #ff6602; }
+  input[type="submit"]:hover, button[type="submit"]:hover {
+    -webkit-transition: background-color 0.2s;
+    -moz-transition: background-color 0.2s;
+    transition: background-color 0.2s;
+    background-color: #ff7d28; }
+
+form {
+  -moz-placeholder-color: #7b8187;
+  -ms-input-placeholder-color: #7b8187; }
+  form ::-webkit-input-placeholder {
+    color: #7b8187; }
+  form ::-moz-placeholder {
+    color: #7b8187; }
+
+.form-errors {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  font-size: 0.875em;
+  background: rgba(255, 0, 0, 0.075);
+  color: #4d0000; }
+  .form-errors li::before {
+    color: #4d0000; }
+
+.form-label-small, .form-add-review-salary label, .form-add-review-salary h5 {
+  display: block;
+  margin: 0 0 0.5rem;
+  font-family: "Roboto", Helvetica, sans-serif;
+  line-height: 1.1;
+  color: #13406d; }
+
+.form-add-review-salary {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background: #ffffff;
+  border: 1px solid #dbddde;
+  box-shadow: rgba(15, 25, 36, 0.1) 10px 0 50px 0; }
+  .form-add-review-salary .section-header {
+    margin: 1.5rem -1rem 1rem;
+    padding: 0.5rem 1rem 0;
+    text-transform: uppercase;
+    border-top: 1px solid #dbddde;
+    font-weight: 700;
+    color: #9fa3a7; }
+    @media screen and (min-width: 768px) {
+      .form-add-review-salary .section-header {
+        margin: 1.5rem -2rem 1rem;
+        padding: 1rem 2rem 0; } }
+  .form-add-review-salary .form-instructions {
+    display: block;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    background: rgba(19, 64, 109, 0.075); }
+    .form-add-review-salary .form-instructions:after {
+      content: "";
+      display: table;
+      clear: both; }
+    .form-add-review-salary .form-instructions p {
+      font-size: 0.775em;
+      line-height: 1.2; }
+      .form-add-review-salary .form-instructions p:last-of-type {
+        margin-bottom: 0; }
+    @media screen and (min-width: 768px) {
+      .form-add-review-salary .form-instructions {
+        padding: 1rem;
+        margin: 0 -1rem 1rem; }
+        .form-add-review-salary .form-instructions p {
+          float: left;
+          display: block;
+          margin-right: 2.35765%;
+          width: 48.82117%;
+          margin: 0; }
+          .form-add-review-salary .form-instructions p:last-child {
+            margin-right: 0; }
+          .form-add-review-salary .form-instructions p:last-of-type {
+            padding-left: 1.5rem; }
+        .form-add-review-salary .form-instructions b {
+          display: block; } }
+  .form-add-review-salary .with-select {
+    position: relative; }
+    .form-add-review-salary .with-select::after {
+      content: "";
+      position: absolute;
+      top: 0.85rem;
+      right: 1rem;
+      bottom: auto;
+      left: auto;
+      height: 1rem;
+      width: 1rem;
+      background: url("../images/icon-arrow-down.svg") no-repeat center center; }
+    .form-add-review-salary .with-select select {
+      -webkit-transition: border-color 0.3s;
+      -moz-transition: border-color 0.3s;
+      transition: border-color 0.3s;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      height: 2.5rem;
+      width: 100%;
+      padding: 0 1rem;
+      background: none;
+      border: 1px solid #dbddde;
+      border-radius: 0;
+      background: #ffffff;
+      font-size: 0.875em;
+      cursor: pointer; }
+      .form-add-review-salary .with-select select:focus {
+        outline: none; }
+      .form-add-review-salary .with-select select:hover {
+        border-color: #ff6602; }
+  .form-add-review-salary fieldset {
+    display: block;
+    margin-bottom: 1rem; }
+    .form-add-review-salary fieldset:after {
+      content: "";
+      display: table;
+      clear: both; }
+    .form-add-review-salary fieldset p {
+      margin: 0; }
+    .form-add-review-salary fieldset.add-top-border {
+      padding-top: 1rem;
+      border-top: 1px dotted #dbddde; }
+    .form-add-review-salary fieldset.with-rating {
+      margin: 0.5rem 0;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px dotted #dbddde; }
+      .form-add-review-salary fieldset.with-rating label {
+        margin: 0.5rem 0 0; }
+      .form-add-review-salary fieldset.with-rating label, .form-add-review-salary fieldset.with-rating .rating-wrap {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 48.82117%; }
+        .form-add-review-salary fieldset.with-rating label:last-child, .form-add-review-salary fieldset.with-rating .rating-wrap:last-child {
+          margin-right: 0; }
+      .form-add-review-salary fieldset.with-rating .rating-stars {
+        float: right; }
+    .form-add-review-salary fieldset.two-up label, .form-add-review-salary fieldset.two-up p, .form-add-review-salary fieldset.two-up h5 {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 48.82117%; }
+      .form-add-review-salary fieldset.two-up label:last-child, .form-add-review-salary fieldset.two-up p:last-child, .form-add-review-salary fieldset.two-up h5:last-child {
+        margin-right: 0; }
+    .form-add-review-salary fieldset.two-up label, .form-add-review-salary fieldset.two-up h5 {
+      margin-top: 0.75rem; }
+    .form-add-review-salary fieldset.radio-questions label {
+      display: inline-block;
+      text-transform: none;
+      font-size: 0.875rem;
+      font-weight: 400; }
+      .form-add-review-salary fieldset.radio-questions label:first-of-type {
+        margin-right: 1rem; }
+      .form-add-review-salary fieldset.radio-questions label span {
+        float: right;
+        margin: 0.15rem 0 0 0.15rem; }
+    @media screen and (min-width: 768px) {
+      .form-add-review-salary fieldset.radio-questions h5, .form-add-review-salary fieldset.radio-questions p {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 48.82117%; }
+        .form-add-review-salary fieldset.radio-questions h5:last-child, .form-add-review-salary fieldset.radio-questions p:last-child {
+          margin-right: 0; }
+      .form-add-review-salary fieldset.radio-questions h5 {
+        margin-top: 0.5rem; }
+      .form-add-review-salary fieldset.radio-questions p {
+        text-align: right; }
+      .form-add-review-salary fieldset.radio-questions label span {
+        margin: 0.35rem 0 0 0.15rem; } }
+    .form-add-review-salary fieldset.company-pay-input p {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 48.82117%; }
+      .form-add-review-salary fieldset.company-pay-input p:last-child {
+        margin-right: 0; }
+      .form-add-review-salary fieldset.company-pay-input p:first-of-type {
+        position: relative; }
+        .form-add-review-salary fieldset.company-pay-input p:first-of-type input {
+          padding-left: 2.5rem; }
+      .form-add-review-salary fieldset.company-pay-input p .money-sign {
+        position: absolute;
+        top: 1px;
+        right: auto;
+        bottom: 1px;
+        left: 1px;
+        width: 2rem;
+        padding-top: 0.4rem;
+        text-align: center;
+        background: #dbddde; }
+    .form-add-review-salary fieldset.form-actions {
+      margin: 0 -1rem 0;
+      padding: 1rem 1rem 0;
+      border-top: 2px solid #e9eaeb;
+      color: #9fa3a7; }
+      .form-add-review-salary fieldset.form-actions button {
+        float: right; }
+      @media screen and (min-width: 768px) {
+        .form-add-review-salary fieldset.form-actions {
+          margin: 0 -2rem -0.5rem;
+          padding: 1.5rem 2rem 0; } }
+  @media screen and (min-width: 768px) {
+    .form-add-review-salary {
+      padding: 2rem; } }
+
+.user-entry-wrap {
+  padding: 2rem 0;
+  min-height: 400px;
+  height: 50vh;
+  background: #f8f8f8 url("../images/bg-trucks.svg") center top; }
+
+.user-entry-form {
+  max-width: 20em;
+  margin: 0 auto;
+  padding: 1.5rem;
+  background: #ffffff;
+  border: 1px solid #dbddde;
+  box-shadow: rgba(15, 25, 36, 0.1) 10px 0 50px 0;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%); }
+  .user-entry-form input[type="text"],
+  .user-entry-form input[type="email"] {
+    padding: 0.75rem; }
+  .user-entry-form h2 {
+    margin: 0 0 1rem;
+    text-align: center;
+    color: #13406d; }
+  .user-entry-form .remember-me {
+    margin-bottom: 1rem; }
+  .user-entry-form .form-links {
+    margin-top: 1rem;
+    line-height: 1; }
+    .user-entry-form .form-links a {
+      display: inline-block; }
+    .user-entry-form .form-links small {
+      margin: 0 0.25rem; }
+  .user-entry-form fieldset {
+    display: block;
+    margin-bottom: 0.5rem; }
+    .user-entry-form fieldset:after {
+      content: "";
+      display: table;
+      clear: both; }
+    .user-entry-form fieldset:last-of-type {
+      margin-bottom: 0; }
+
 .site-header {
   padding: 1rem;
   color: #9fa3a7;
-  border-bottom: 1px solid #dbddde; }
+  border-bottom: 1px solid #dbddde;
+  background: #ffffff; }
   .site-header:after {
     content: "";
     display: table;
@@ -1086,7 +1547,7 @@ figure {
   position: relative; }
 .site-header-search input[type="text"] {
   width: 100%;
-  padding-right: 1.5rem; }
+  padding: 0.25rem 1.5rem 0.25rem 0.25rem; }
 .site-header-search .fa-search {
   display: block;
   position: absolute;
@@ -1108,15 +1569,14 @@ figure {
   display: inline-block;
   vertical-align: middle;
   margin-right: 0.5rem; }
-  .site-nav small,
-  .site-header-user-wrap small,
-  .site-header-search small {
-    margin: 0 0.25rem; }
   @media screen and (min-width: 768px) {
     .site-nav,
     .site-header-user-wrap,
     .site-header-search {
       margin-left: 1.5rem; } }
+
+.site-header-user-wrap small {
+  margin: 0 0.25rem; }
 
 .homepage .site-header .site-header-search {
   display: none; }
@@ -1190,6 +1650,9 @@ figure {
         margin-top: 1rem; }
         .site-footer .footer-nav a {
           margin: 0 1rem 0 0; } }
+
+.user-entry-page .site-footer {
+  margin-top: 0; }
 
 .homepage-section.homepage-hero {
   display: table;
@@ -1455,94 +1918,127 @@ figure {
   @media screen and (max-width: 768px) {
     .company-detail-page .company-detail-anchor-nav .anchor-nav {
       margin-bottom: 1rem; }
+      .company-detail-page .company-detail-anchor-nav .anchor-nav .link-wrap {
+        display: block; }
+        .company-detail-page .company-detail-anchor-nav .anchor-nav .link-wrap:after {
+          content: "";
+          display: table;
+          clear: both; }
       .company-detail-page .company-detail-anchor-nav .anchor-nav span {
         display: block;
         margin-bottom: 0.5rem; }
       .company-detail-page .company-detail-anchor-nav .anchor-nav a {
-        margin-right: 0.25rem; } }
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 48.82117%;
+        padding: 0.5rem 0; }
+        .company-detail-page .company-detail-anchor-nav .anchor-nav a:last-child {
+          margin-right: 0; }
+        .company-detail-page .company-detail-anchor-nav .anchor-nav a:nth-child(2n) {
+          margin-right: 0; }
+        .company-detail-page .company-detail-anchor-nav .anchor-nav a:nth-child(2n+1) {
+          clear: left; } }
   @media screen and (min-width: 768px) {
     .company-detail-page .company-detail-anchor-nav .anchor-nav, .company-detail-page .company-detail-anchor-nav .actions {
       display: inline-block;
       vertical-align: middle;
       white-space: normal;
       width: 50%; }
+    .company-detail-page .company-detail-anchor-nav .link-wrap {
+      display: inline-block; }
     .company-detail-page .company-detail-anchor-nav .actions {
       text-align: right; }
       .company-detail-page .company-detail-anchor-nav .actions a {
         margin-left: 0.5rem; }
     .company-detail-page .company-detail-anchor-nav .anchor-nav a, .company-detail-page .company-detail-anchor-nav .anchor-nav span {
       margin-right: 1rem; } }
-.company-detail-page .company-detail-profile-media {
+.company-detail-page .company-detail-profile-salary {
   padding: 1.25rem 0; }
   @media screen and (min-width: 768px) {
-    .company-detail-page .company-detail-profile-media {
+    .company-detail-page .company-detail-profile-salary {
       padding: 3.5rem 0; } }
-  .company-detail-page .company-detail-profile-media .company-logo {
-    max-height: 3rem;
-    margin: 1rem 0; }
-  .company-detail-page .company-detail-profile-media .company-videos-wrap a {
+  @media screen and (min-width: 980px) {
+    .company-detail-page .company-detail-profile-salary .sub-group {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 46.68872%; }
+      .company-detail-page .company-detail-profile-salary .sub-group:last-child {
+        margin-right: 0; }
+      .company-detail-page .company-detail-profile-salary .sub-group:last-child {
+        margin-left: 4.2649%; } }
+.company-detail-page .company-detail-video-images {
+  padding: 1.25rem 0;
+  border-top: 1px solid #dbddde; }
+  @media screen and (min-width: 768px) {
+    .company-detail-page .company-detail-video-images {
+      padding: 3.5rem 0; } }
+  .company-detail-page .company-detail-video-images .company-videos-wrap a {
     float: left;
     display: block;
     margin-right: 2.35765%;
     width: 48.82117%;
     margin-bottom: 1rem; }
-    .company-detail-page .company-detail-profile-media .company-videos-wrap a:last-child {
+    .company-detail-page .company-detail-video-images .company-videos-wrap a:last-child {
       margin-right: 0; }
-    .company-detail-page .company-detail-profile-media .company-videos-wrap a:nth-child(2n) {
+    .company-detail-page .company-detail-video-images .company-videos-wrap a:nth-child(2n) {
       margin-right: 0; }
-    .company-detail-page .company-detail-profile-media .company-videos-wrap a:nth-child(2n+1) {
+    .company-detail-page .company-detail-video-images .company-videos-wrap a:nth-child(2n+1) {
       clear: left; }
-    .company-detail-page .company-detail-profile-media .company-videos-wrap a img {
+    .company-detail-page .company-detail-video-images .company-videos-wrap a img {
       box-shadow: rgba(15, 25, 36, 0.1) 5px 5px 0 0; }
-  .company-detail-page .company-detail-profile-media .company-videos-wrap span {
+  .company-detail-page .company-detail-video-images .company-videos-wrap span {
     display: block;
     margin-top: 0.75rem;
     font-size: 0.775em;
     font-style: italic;
     line-height: 1;
     color: #9fa3a7; }
-  .company-detail-page .company-detail-profile-media .company-images,
-  .company-detail-page .company-detail-profile-media .company-videos {
-    margin-top: 1rem; }
-  .company-detail-page .company-detail-profile-media .company-images-wrap a {
+  .company-detail-page .company-detail-video-images .company-images-wrap,
+  .company-detail-page .company-detail-video-images .company-videos-wrap {
+    margin-top: 2rem; }
+  .company-detail-page .company-detail-video-images .company-images-wrap a {
     float: left;
     display: block;
     margin-right: 2.35765%;
     width: 31.76157%; }
-    .company-detail-page .company-detail-profile-media .company-images-wrap a:last-child {
+    .company-detail-page .company-detail-video-images .company-images-wrap a:last-child {
       margin-right: 0; }
-    .company-detail-page .company-detail-profile-media .company-images-wrap a:nth-child(3n) {
+    .company-detail-page .company-detail-video-images .company-images-wrap a:nth-child(3n) {
       margin-right: 0; }
-    .company-detail-page .company-detail-profile-media .company-images-wrap a:nth-child(3n+1) {
+    .company-detail-page .company-detail-video-images .company-images-wrap a:nth-child(3n+1) {
       clear: left; }
-    .company-detail-page .company-detail-profile-media .company-images-wrap a img {
+    .company-detail-page .company-detail-video-images .company-images-wrap a img {
       box-shadow: rgba(15, 25, 36, 0.1) 5px 5px 0 0; }
+  @media screen and (max-width: 980px) {
+    .company-detail-page .company-detail-video-images .sub-group:last-child {
+      padding-top: 1rem;
+      border-top: 1px solid #dbddde; } }
   @media screen and (min-width: 980px) {
-    .company-detail-page .company-detail-profile-media .sub-group {
+    .company-detail-page .company-detail-video-images .sub-group {
       float: left;
       display: block;
       margin-right: 2.35765%;
       width: 46.68872%; }
-      .company-detail-page .company-detail-profile-media .sub-group:last-child {
+      .company-detail-page .company-detail-video-images .sub-group:last-child {
         margin-right: 0; }
-      .company-detail-page .company-detail-profile-media .sub-group:last-child {
+      .company-detail-page .company-detail-video-images .sub-group:last-child {
         margin-left: 4.2649%; }
-    .company-detail-page .company-detail-profile-media .company-videos {
-      margin: 0; }
-    .company-detail-page .company-detail-profile-media .company-images-wrap a {
+    .company-detail-page .company-detail-video-images .company-images-wrap a {
       float: left;
       display: block;
       margin-right: 2.35765%;
       width: 23.23176%; }
-      .company-detail-page .company-detail-profile-media .company-images-wrap a:nth-child(3n) {
+      .company-detail-page .company-detail-video-images .company-images-wrap a:nth-child(3n) {
         margin-right: 2.35765%; }
-      .company-detail-page .company-detail-profile-media .company-images-wrap a:nth-child(3n+1) {
+      .company-detail-page .company-detail-video-images .company-images-wrap a:nth-child(3n+1) {
         clear: none; }
-      .company-detail-page .company-detail-profile-media .company-images-wrap a:last-child {
+      .company-detail-page .company-detail-video-images .company-images-wrap a:last-child {
         margin-right: 0; }
-      .company-detail-page .company-detail-profile-media .company-images-wrap a:nth-child(4n) {
+      .company-detail-page .company-detail-video-images .company-images-wrap a:nth-child(4n) {
         margin-right: 0; }
-      .company-detail-page .company-detail-profile-media .company-images-wrap a:nth-child(4n+1) {
+      .company-detail-page .company-detail-video-images .company-images-wrap a:nth-child(4n+1) {
         clear: left; } }
 .company-detail-page .company-detail-reivews,
 .company-detail-page .company-detail-discussion,
@@ -1554,5 +2050,69 @@ figure {
     .company-detail-page .company-detail-discussion,
     .company-detail-page .company-detail-job-postings {
       padding: 3.5rem 0; } }
+
+.all-companies-list-header {
+  margin-bottom: 1.5rem;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid #dbddde; }
+  .all-companies-list-header:after {
+    content: "";
+    display: table;
+    clear: both; }
+  .all-companies-list-header form .with-select {
+    position: relative; }
+    .all-companies-list-header form .with-select::after {
+      content: "";
+      position: absolute;
+      top: 0.75rem;
+      right: 1rem;
+      bottom: auto;
+      left: auto;
+      height: 1rem;
+      width: 1rem;
+      background: url("../images/icon-arrow-down.svg") no-repeat center center; }
+  .all-companies-list-header form select {
+    -webkit-transition: border-color 0.3s;
+    -moz-transition: border-color 0.3s;
+    transition: border-color 0.3s;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    height: 2.5rem;
+    width: 100%;
+    padding: 0 1rem;
+    background: none;
+    border: 1px solid #dbddde;
+    border-radius: 0;
+    background: #ffffff;
+    font-size: 0.875em;
+    cursor: pointer; }
+    .all-companies-list-header form select:focus {
+      outline: none; }
+    .all-companies-list-header form select:hover {
+      border-color: #ff6602; }
+  @media screen and (min-width: 768px) {
+    .all-companies-list-header h2 {
+      float: left;
+      margin: 1.25rem 0 0; }
+    .all-companies-list-header form {
+      float: right;
+      width: 15em; } }
+
+@media screen and (min-width: 768px) {
+  .basic-page-wrap {
+    padding: 2rem 0 0; } }
+.basic-page-wrap .container {
+  padding: 1rem;
+  border: 1px solid #e9eaeb;
+  box-shadow: rgba(15, 25, 36, 0.05) 0 0 50px 0; }
+  @media screen and (min-width: 768px) {
+    .basic-page-wrap .container {
+      padding: 2rem; } }
+.basic-page-wrap h2 {
+  font-weight: 700; }
+  .basic-page-wrap h2:first-child {
+    margin-top: 0; }
+.basic-page-wrap h2, .basic-page-wrap h3, .basic-page-wrap h4 {
+  color: #13406d; }
 
 /*# sourceMappingURL=site.css.map */

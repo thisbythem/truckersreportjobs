@@ -34,48 +34,71 @@
       <div class="container">
         <div class="anchor-nav">
           <span>Go to</span>
-          <a href="#reviews">Reviews</a>
-          <a href="#salary-surveys">Salary Surveys</a>
-          <a href="#discussion">Discussion</a>
-          <a href="#jobs">Jobs</a>
+          <div class="link-wrap">
+            <a href="#media">Videos & Images</a>
+            <a href="#reviews">Reviews</a>
+            <a href="#salary-surveys">Salary Surveys</a>
+            <a href="#discussion">Discussion</a>
+            <a href="#jobs">Jobs</a>
+          </div>
         </div>
         <div class="actions">
-          <a href="/"><i class="fa fa-pencil-square-o"></i> Review this Company</a>
-          <a href="/"><i class="fa fa-check-square-o"></i> Take Salary Survey</a>
+          <a href="/add-full-review.php"><i class="fa fa-pencil-square-o"></i> Review an Employer</a>
+          <a href="/add-salary-survey.php"><i class="fa fa-check-square-o"></i> Take a Salary Survey</a>
         </div>
       </div>
     </div>
 
-    <div class="company-detail-section company-detail-profile-media">
+    <div class="company-detail-section company-detail-profile-salary">
       <div class="container">
         <div class="sub-group company-detail-profile-wrap">
           <h4><i class="fa fa-circle"></i> Profile</h4>
-
           <p>50 years of exceptional service.</p>
           <p>Even though Crete Carrier is one of the largest privately owned dry van trucking companies in the country, we understand that building relationships is the foundation for our success. That’s why we always listen to the needs and concerns of our customers. If you need it done, we’re dedicated to finding the best solution.</p>
           <p>With a fleet of more than 4,000 tractors and 10,500 53-foot trailers, we have the resources to provide reliable delivery for industry-leading customers anywhere in the continental United States. Plus, our drivers are among the very best on the highways, and we have one of the lowest turnover rates in the industry. So, your freight will be entrusted to an experienced carrier committed to getting it to its destination on time, every time.</p>
         </div>
-        <div class="sub-group company-detail-media-wrap">
+        <div class="sub-group company-detail-profile-wrap">
+          <h4><i class="fa fa-circle"></i> Salary</h4>
+          <p>The Glassdoor.com average salary for Fedex Ground Delivery Drivers is $39,016 per year.</p>
+          <p>FedEx employees may receive the following benefits:</p>
+          <ul>
+            <li>Salary increase based on individual performance</li>
+            <li>Variable Pay	</li>
+            <li>Tuition Assistance	</li>
+            <li>Paid Time Off	</li>
+            <li>Supplemental Commercial Medical Insurance	</li>
+            <li>Life & Accidental Death Insurance	</li>
+            <li>Reduced Shipping Rate	</li>
+            <li>Discounted Travel	</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="company-detail-section company-detail-video-images" id="media">
+      <div class="container">
+
+        <div class="sub-group company-detail-videos">
           <h4><i class="fa fa-circle"></i> Videos <a href="/"><i class="fa fa-plus"></i> Add Video</a></h4>
-          <div class="company-videos">
-            <div class="row company-videos-wrap">
-              <a class="venobox" data-type="youtube" data-overlay="rgba(19,64,108,0.85)" href="https://youtu.be/YETb5VzLsJg" data-autoplay="true">
-                <img src="../images/temp-vid-slug-1.jpg" />
-                <span>Video Title Here</span>
-              </a>
-              <a class="venobox" data-type="youtube" data-overlay="rgba(19,64,108,0.85)" href="https://youtu.be/YtJwOoUYOwc" data-autoplay="true">
-                <img src="../images/temp-vid-slug-2.jpg" />
-                <span>Video Title Here</span>
-              </a>
-            </div>
+          <div class="row company-videos-wrap">
+            <a class="venobox" data-type="youtube" data-overlay="rgba(19,64,108,0.85)" href="https://youtu.be/YETb5VzLsJg" data-autoplay="true">
+              <img src="../images/temp-vid-slug-1.jpg" />
+              <span>Video Title Here</span>
+            </a>
+            <a class="venobox" data-type="youtube" data-overlay="rgba(19,64,108,0.85)" href="https://youtu.be/YtJwOoUYOwc" data-autoplay="true">
+              <img src="../images/temp-vid-slug-2.jpg" />
+              <span>Video Title Here</span>
+            </a>
           </div>
-          <div class="company-images">
-            <h4><i class="fa fa-circle"></i> Photos <a href="/"><i class="fa fa-plus"></i> Add Photo</a></h4>
-            <div class="row company-images-wrap">
-              <a class="venobox" data-gall="companyGallery" href="../images/temp-image-thumb-1.jpg"><img src="../images/temp-image-thumb-1.jpg" /></a>
-              <a class="venobox" data-gall="companyGallery" href="../images/temp-image-thumb-1.jpg"><img src="../images/temp-image-thumb-1.jpg" /></a>
-              <a class="venobox" data-gall="companyGallery" href="../images/temp-image-thumb-1.jpg"><img src="../images/temp-image-thumb-1.jpg" /></a>
-            </div>
+        </div>
+
+        <div class="sub-group company-detail-images">
+          <h4><i class="fa fa-circle"></i> Photos <a href="/"><i class="fa fa-plus"></i> Add Photo</a></h4>
+          <div class="row company-images-wrap">
+            <a class="venobox" data-gall="companyGallery" href="../images/temp-image-thumb-1.jpg"><img src="../images/temp-image-thumb-1.jpg" /></a>
+            <a class="venobox" data-gall="companyGallery" href="../images/temp-image-thumb-1.jpg"><img src="../images/temp-image-thumb-1.jpg" /></a>
+            <a class="venobox" data-gall="companyGallery" href="../images/temp-image-thumb-1.jpg"><img src="../images/temp-image-thumb-1.jpg" /></a>
           </div>
         </div>
       </div>
@@ -83,16 +106,19 @@
 
     <div class="company-detail-section company-detail-reivews" id="reviews">
       <div class="container">
-        <h4><i class="fa fa-circle"></i> Reviews <a href="/"><i class="fa fa-plus"></i> Review this Company</a></h4>
+        <h4><i class="fa fa-circle"></i> Reviews <a href="/add-full-review.php"><i class="fa fa-plus"></i> Review this Company</a></h4>
         <?php include("include/company-detail-review-entry.php"); ?>
         <?php include("include/company-detail-review-entry.php"); ?>
         <?php include("include/company-detail-review-entry.php"); ?>
+        <div class="view-more-wrap">
+          <a href="#">View More Reviews</a>
+        </div>
       </div>
     </div>
 
     <div class="company-detail-section company-detail-reivews" id="salary">
       <div class="container">
-        <h4><i class="fa fa-circle"></i> Salary Surveys <a href="/"><i class="fa fa-plus"></i> Take a Salary Survey</a></h4>
+        <h4><i class="fa fa-circle"></i> Salary Surveys <a href="/add-salary-survey.php"><i class="fa fa-plus"></i> Take a Salary Survey</a></h4>
         <?php include("include/company-detail-salary-entry.php"); ?>
         <?php include("include/company-detail-salary-entry.php"); ?>
         <?php include("include/company-detail-salary-entry.php"); ?>
@@ -106,6 +132,9 @@
         <?php include("include/company-detail-discussion-entry.php"); ?>
         <?php include("include/company-detail-discussion-entry.php"); ?>
         <?php include("include/company-detail-discussion-entry.php"); ?>
+        <div class="view-more-wrap">
+          <a href="#">View More Discussions</a>
+        </div>
       </div>
     </div>
 

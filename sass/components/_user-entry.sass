@@ -1,0 +1,44 @@
+.user-entry-wrap
+  padding: 2rem 0
+  min-height: 400px
+  height: 50vh
+  background: $off-white url("../images/bg-trucks.svg") center top
+
+.user-entry-form
+  max-width: 20em
+  margin: 0 auto
+  padding: 1.5rem
+  background: $white
+  border: 1px solid $gray-light
+  box-shadow: transparentize($black, .9) 10px 0 50px 0
+  position: relative
+  top: 50%
+  +transform(translateY(-50%))
+
+  input[type="text"],
+  input[type="email"]
+    padding: .75rem
+
+  h2
+    margin: 0 0 1rem
+    text-align: center
+    color: $brand-blue
+
+  .remember-me
+    @extend %small-heavy-caps
+    margin-bottom: 1rem
+
+  .form-links
+    margin-top: 1rem
+    line-height: 1
+    a
+      @extend %small-heavy-caps
+      display: inline-block
+    small
+      margin: 0 .25rem
+
+  fieldset
+    +row
+    margin-bottom: .5rem
+    &:last-of-type
+      margin-bottom: 0

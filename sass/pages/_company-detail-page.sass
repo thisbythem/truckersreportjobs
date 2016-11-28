@@ -122,11 +122,15 @@
     +media($smallScreenDown)
       .anchor-nav
         margin-bottom: 1rem
+        .link-wrap
+          +row
         span
           display: block
           margin-bottom: .5rem
         a
-          margin-right: .25rem
+          +span-columns(6)
+          +omega(2n)
+          padding: .5rem 0
 
     +media($smallScreenUp)
       .anchor-nav, .actions
@@ -134,6 +138,8 @@
         vertical-align: middle
         white-space: normal
         width: 50%
+      .link-wrap
+        display: inline-block
       .actions
         text-align: right
         a
@@ -142,12 +148,22 @@
         a, span
           margin-right: 1rem
 
-  .company-detail-profile-media
+  .company-detail-profile-salary
     +section-padding-sm
 
-    .company-logo
-      max-height: 3rem
-      margin: 1rem 0
+    li
+      @extend %bullet-list-style
+
+    +media($mediumScreenUp)
+      .sub-group
+        +span-columns(5.75)
+        &:last-child
+          +shift(.5)
+
+  .company-detail-video-images
+    +section-padding-sm
+    border-top: 1px solid $gray-light
+
     .company-videos-wrap
       a
         +span-columns(6)
@@ -162,9 +178,10 @@
         font-style: italic
         line-height: 1
         color: $gray-medium
-    .company-images,
-    .company-videos
-      margin-top: 1rem
+
+    .company-images-wrap,
+    .company-videos-wrap
+      margin-top: 2rem
 
     .company-images-wrap
       a
@@ -173,13 +190,16 @@
         img
           +add-box-shadow(5px)
 
+    +media($mediumScreenDown)
+      .sub-group:last-child
+        padding-top: 1rem
+        border-top: 1px solid $gray-light
+
     +media($mediumScreenUp)
       .sub-group
         +span-columns(5.75)
         &:last-child
           +shift(.5)
-      .company-videos
-        margin: 0
       .company-images-wrap
         a
           +omega-reset(3n)
@@ -188,6 +208,6 @@
 
   .company-detail-reivews,
   .company-detail-discussion,
-  .company-detail-job-postings    
+  .company-detail-job-postings
     +section-padding-sm
     border-top: 1px solid $gray-light

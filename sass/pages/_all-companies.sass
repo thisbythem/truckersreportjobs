@@ -1,0 +1,21 @@
+.all-companies-list-header
+  +clearfix
+  margin-bottom: 1.5rem
+  padding: 1.5rem 0
+  border-bottom: 1px solid $gray-light
+  form
+    label
+      @extend %small-heavy-caps
+    .with-select
+      +add-select-arrow(.75rem)
+    select
+      +select-block-style(2.5rem)
+
+  +media($smallScreenUp)
+    h2
+      float: left
+      margin: 1.25rem 0 0
+
+    form
+      float: right
+      width: 15em

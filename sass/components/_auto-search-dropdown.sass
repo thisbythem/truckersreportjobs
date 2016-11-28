@@ -1,0 +1,50 @@
+.site-search
+  position: relative
+
+.nav-search-results
+  display: none
+  +position(absolute, 100% 0 auto 0)
+  z-index: 100
+  background: $white
+  border: 1px solid $gray-light
+  border-top: none
+  box-shadow: transparentize($black, .9) 3px 3px 0 0, transparentize($black, .9) 0 15px 20px 0
+  &.is-open
+    display: block
+
+  li
+    line-height: 1
+    border-bottom: 1px solid $gray-lighter
+    &:last-child
+      border: none
+
+  span, small
+    display: block
+
+  small
+    @extend %small-heavy-caps
+    margin-top: .25rem
+    color: $gray-dark
+
+  a
+    +transition(color .3s, background .3s)
+    display: block
+    padding: .5rem
+    font-size: .775em
+    line-height: 1.1
+    color: $brand-blue
+    &:hover
+      background: $off-white
+      color: $brand-orange
+
+  &.search-results-wide
+    text-align: left
+    a
+      +clearfix
+      padding: .75rem
+      font-size: .925em
+    span
+      float: left
+    small
+      float: right
+      color: $gray-medium

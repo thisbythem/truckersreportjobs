@@ -11,11 +11,11 @@
       </div>
     </div>
     <nav class="footer-nav">
-      <a href="/">All Companies</a>
-      <a href="/">Sign In</a>
-      <a href="/">Register</a>
-      <a href="/">Employers</a>
-      <a href="/">Privacy Policy</a>
+      <a href="/all-companies.php">All Companies</a>
+      <a href="/user-login.php">Sign In</a>
+      <a href="/user-register.php">Register</a>
+      <a href="/basic-page.php">Employers</a>
+      <a href="/basic-page.php">Privacy Policy</a>
     </nav>
     <p class="copyright">
       <small>© 2016 TruckersReport.com</small>

@@ -1,0 +1,122 @@
+.form-add-review-salary
+  margin-bottom: 1rem
+  padding: 1rem
+  background: $white
+  border: 1px solid $gray-light
+  box-shadow: transparentize($black, .9) 10px 0 50px 0
+
+  label, h5
+    @extend .form-label-small
+
+  .section-header
+    margin: 1.5rem -1rem 1rem
+    padding: .5rem 1rem 0
+    text-transform: uppercase
+    border-top: 1px solid $gray-light
+    font-weight: 700
+    color: $gray-medium
+    +media($smallScreenUp)
+      margin: 1.5rem -2rem 1rem
+      padding: 1rem 2rem 0
+
+  .form-instructions
+    +row
+    padding: .5rem
+    margin-bottom: 1rem
+    background: transparentize($brand-blue, .925)
+    p
+      font-size: .775em
+      line-height: 1.2
+      &:last-of-type
+        margin-bottom: 0
+    +media($smallScreenUp)
+      padding: 1rem
+      margin: 0 -1rem 1rem
+      p
+        +span-columns(6)
+        margin: 0
+        &:last-of-type
+          padding-left: 1.5rem
+      b
+        display: block
+
+  .with-select
+    +add-select-arrow(.85rem)
+    select
+      +select-block-style(2.5rem)
+
+  fieldset
+    +row
+    margin-bottom: 1rem
+    p
+      margin: 0
+    &.add-top-border
+      padding-top: 1rem
+      border-top: 1px dotted $gray-light
+
+    /// FIELDSET STYLES
+    &.with-rating
+      margin: .5rem 0
+      padding-bottom: .5rem
+      border-bottom: 1px dotted $gray-light
+      label
+        margin: .5rem 0 0
+      label, .rating-wrap
+        +span-columns(6)
+      .rating-stars
+        float: right
+    &.two-up
+      label, p, h5
+        +span-columns(6)
+      label, h5
+        margin-top: .75rem
+    &.radio-questions
+      label
+        display: inline-block
+        text-transform: none
+        font-size: .875rem
+        font-weight: 400
+        &:first-of-type
+          margin-right: 1rem
+        span
+          float: right
+          margin: .15rem 0 0 .15rem
+      +media($smallScreenUp)
+        h5, p
+          +span-columns(6)
+        h5
+          margin-top: .5rem
+        p
+          text-align: right
+        label span
+          margin: .35rem 0 0 .15rem
+
+    &.company-pay-input
+      p
+        +span-columns(6)
+        &:first-of-type
+          position: relative
+          input
+            padding-left: 2.5rem
+        .money-sign
+          +position(absolute, 1px auto 1px 1px)
+          width: 2rem
+          padding-top: .4rem
+          text-align: center
+          background: $gray-light
+    &.form-actions
+      margin: 0 -1rem 0
+      padding: 1rem 1rem 0
+      border-top: 2px solid $gray-lighter
+      color: $gray-medium
+      button
+        float: right
+      +media($smallScreenUp)
+        margin: 0 -2rem -.5rem
+        padding: 1.5rem 2rem 0
+
+
+
+
+  +media($smallScreenUp)
+    padding: 2rem
