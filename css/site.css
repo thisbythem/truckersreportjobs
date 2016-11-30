@@ -482,7 +482,7 @@ th {
   max-width: 100%;
   height: auto; }
 
-.btn, .view-more-wrap a, input[type="submit"], button[type="submit"], .homepage-section.homepage-hero .action-callouts a, .company-detail-page .company-detail-anchor-nav .actions a {
+.btn, .view-more-wrap a, input[type="submit"], button[type="submit"], input[type="submit"].secondary-button, button[type="submit"].secondary-button, .homepage-section.homepage-hero .action-callouts a, .company-detail-page .company-detail-anchor-nav .actions a {
   display: inline-block;
   padding: 1.25em 2.25em;
   color: #fff;
@@ -502,21 +502,21 @@ th {
 .company-detail-salary-entry dt, .company-detail-review-entry .company-detail-review-entry-footer,
 .company-detail-review-entry .company-detail-salary-entry-footer,
 .company-detail-salary-entry .company-detail-review-entry-footer,
-.company-detail-salary-entry .company-detail-salary-entry-footer, .company-detail-discussion-entry .discussion-author, .company-detail-discussion-entry .company-detail-discussion-entry-footer, .company-detail-discussion-entry .entry-forum-link, .company-detail-job-entry span:last-of-type, .nav-search-results small, .company-list-block .read-more, .company-list-block .company-rating-total, .form-label-small, .form-add-review-salary label, .form-add-review-salary h5, .user-entry-form .remember-me, .user-entry-form .form-links a, .site-nav,
+.company-detail-salary-entry .company-detail-salary-entry-footer, .company-detail-discussion-entry .discussion-author, .company-detail-discussion-entry .company-detail-discussion-entry-footer, .company-detail-discussion-entry .entry-forum-link, .company-detail-job-entry span:last-of-type, .nav-search-results small, .company-list-block .read-more, .company-list-block .company-rating-total, .form-label-small, .form-add-review-salary label, .form-add-review-salary h5, .form-upload-box label, .form-upload-box h5, .user-entry-form .remember-me, .user-entry-form .form-links a, .site-nav,
 .site-header-user-wrap, .site-footer .footer-nav a, .site-footer .copyright, .company-detail-page .company-detail-header .company-trailer-type span, .company-detail-page .company-detail-anchor-nav .anchor-nav, .all-companies-list-header form label {
   font-size: 0.675em;
   font-weight: 700;
   text-transform: uppercase; }
 
-.form-errors li, .company-detail-page .company-detail-profile-salary li, .basic-page-wrap li {
+.form-alert li, .company-detail-page .company-detail-profile-salary li, .basic-page-wrap li {
   position: relative;
   margin-bottom: 0.75rem;
   padding-left: 1rem;
   font-size: 0.925em;
   line-height: 1.1; }
-  .form-errors li:last-of-type, .company-detail-page .company-detail-profile-salary li:last-of-type, .basic-page-wrap li:last-of-type {
+  .form-alert li:last-of-type, .company-detail-page .company-detail-profile-salary li:last-of-type, .basic-page-wrap li:last-of-type {
     margin-bottom: 0; }
-  .form-errors li::before, .company-detail-page .company-detail-profile-salary li::before, .basic-page-wrap li::before {
+  .form-alert li::before, .company-detail-page .company-detail-profile-salary li::before, .basic-page-wrap li::before {
     content: "•";
     position: absolute;
     top: -0.25rem;
@@ -1278,6 +1278,16 @@ input[type="submit"], button[type="submit"] {
     -moz-transition: background-color 0.2s;
     transition: background-color 0.2s;
     background-color: #ff7d28; }
+  input[type="submit"].secondary-button, button[type="submit"].secondary-button {
+    -webkit-transition: background-color 0.2s;
+    -moz-transition: background-color 0.2s;
+    transition: background-color 0.2s;
+    background-color: #13406d; }
+    input[type="submit"].secondary-button:hover, button[type="submit"].secondary-button:hover {
+      -webkit-transition: background-color 0.2s;
+      -moz-transition: background-color 0.2s;
+      transition: background-color 0.2s;
+      background-color: #365d83; }
 
 form {
   -moz-placeholder-color: #7b8187;
@@ -1287,16 +1297,53 @@ form {
   form ::-moz-placeholder {
     color: #7b8187; }
 
-.form-errors {
+.form-alert {
+  position: relative;
   margin-bottom: 1.5rem;
   padding: 1rem;
   font-size: 0.875em;
-  background: rgba(255, 0, 0, 0.075);
-  color: #4d0000; }
-  .form-errors li::before {
+  background: rgba(58, 146, 175, 0.075);
+  color: #276276; }
+  .form-alert p:last-of-type {
+    margin-bottom: 0; }
+  .form-alert ul {
+    margin: 1rem; }
+    .form-alert ul:last-child {
+      margin-bottom: 0; }
+  .form-alert li::before {
+    color: #276276; }
+  .form-alert.alert-success {
+    background: rgba(0, 128, 0, 0.075);
+    color: #003400; }
+    .form-alert.alert-success li::before {
+      color: #003400; }
+  .form-alert.alert-error {
+    background: rgba(255, 0, 0, 0.075);
     color: #4d0000; }
+    .form-alert.alert-error li::before {
+      color: #4d0000; }
+  .form-alert.add-close {
+    padding-right: 2rem; }
+    .form-alert.add-close .close-icon {
+      -webkit-transition: opacity, 0.3s;
+      -moz-transition: opacity, 0.3s;
+      transition: opacity, 0.3s;
+      opacity: 0.5;
+      display: block;
+      position: absolute;
+      top: 4px;
+      right: 4px;
+      bottom: auto;
+      left: auto;
+      padding: 0.4rem;
+      border: 2px solid rgba(15, 25, 36, 0.35);
+      background: url("../images/icon-close.svg") no-repeat center center;
+      background-size: 75%;
+      cursor: pointer; }
+      .form-alert.add-close .close-icon:hover {
+        opacity: 1; }
 
-.form-label-small, .form-add-review-salary label, .form-add-review-salary h5 {
+.form-label-small, .form-add-review-salary label, .form-add-review-salary h5, .form-upload-box label, .form-upload-box h5 {
   display: block;
   margin: 0 0 0.5rem;
   font-family: "Roboto", Helvetica, sans-serif;
@@ -1522,6 +1569,50 @@ form {
       clear: both; }
     .user-entry-form fieldset:last-of-type {
       margin-bottom: 0; }
+
+.form-upload-box {
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background: #ffffff;
+  border: 1px solid #dbddde;
+  box-shadow: rgba(15, 25, 36, 0.1) 10px 0 50px 0; }
+  @media screen and (min-width: 768px) {
+    .form-upload-box {
+      padding: 2rem; } }
+  .form-upload-box .form-action-upload p:last-of-type {
+    margin-bottom: 0; }
+
+.progress-div h4 {
+  margin: 0 0 0.5rem;
+  font-weight: 700; }
+  .progress-div h4 .close-icon {
+    -webkit-transition: opacity, 0.3s;
+    -moz-transition: opacity, 0.3s;
+    transition: opacity, 0.3s;
+    opacity: 0.5;
+    display: block;
+    float: right;
+    padding: 0.4rem;
+    border: 2px solid rgba(15, 25, 36, 0.35);
+    background: url("../images/icon-close.svg") no-repeat center center;
+    background-size: 75%;
+    cursor: pointer; }
+    .progress-div h4 .close-icon:hover {
+      opacity: 1; }
+.progress-div .progress {
+  position: relative;
+  overflow: hidden;
+  height: 2rem;
+  margin-bottom: 20px;
+  background-color: #e9eaeb; }
+.progress-div .progress-bar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  background: #66b366; }
 
 .site-header {
   padding: 1rem;

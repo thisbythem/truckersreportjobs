@@ -8,7 +8,7 @@
       <div class="container narrow">
         <h2>Add Salary Survey</h2>
         <form class="form-add-review-salary">
-          <div class="form-errors">
+          <div class="form-alert alert-error">
             <p><b>Whoops!</b> There were some problems with your input.</p>
             <ul>
               <li>The pay field is required.</li>

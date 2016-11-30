@@ -80,7 +80,7 @@
       <div class="container">
 
         <div class="sub-group company-detail-videos">
-          <h4><i class="fa fa-circle"></i> Videos <a href="/"><i class="fa fa-plus"></i> Add Video</a></h4>
+          <h4><i class="fa fa-circle"></i> Videos <a href="/add-video-image.php"><i class="fa fa-plus"></i> Add Video</a></h4>
           <div class="row company-videos-wrap">
             <a class="venobox" data-type="youtube" data-overlay="rgba(19,64,108,0.85)" href="https://youtu.be/YETb5VzLsJg" data-autoplay="true">
               <img src="../images/temp-vid-slug-1.jpg" />
@@ -94,7 +94,7 @@
         </div>
 
         <div class="sub-group company-detail-images">
-          <h4><i class="fa fa-circle"></i> Photos <a href="/"><i class="fa fa-plus"></i> Add Photo</a></h4>
+          <h4><i class="fa fa-circle"></i> Photos <a href="/add-video-image.php"><i class="fa fa-plus"></i> Add Photo</a></h4>
           <div class="row company-images-wrap">
             <a class="venobox" data-gall="companyGallery" href="../images/temp-image-thumb-1.jpg"><img src="../images/temp-image-thumb-1.jpg" /></a>
             <a class="venobox" data-gall="companyGallery" href="../images/temp-image-thumb-1.jpg"><img src="../images/temp-image-thumb-1.jpg" /></a>

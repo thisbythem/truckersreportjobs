@@ -1,0 +1,29 @@
+.progress-div
+  h4
+    margin: 0 0 .5rem
+    font-weight: 700
+    .close-icon
+      +transition(opacity, .3s)
+      opacity: .5
+      display: block
+      float: right
+      padding: .4rem
+      border: 2px solid transparentize($black, .65)
+      background: url("../images/icon-close.svg") no-repeat center center
+      background-size: 75%
+      cursor: pointer
+      &:hover
+        opacity: 1
+
+
+  .progress
+    position: relative
+    overflow: hidden
+    height: 2rem
+    margin-bottom: 20px
+    background-color: $gray-lighter
+
+  .progress-bar
+    +position(absolute, 0 0 0 0)
+    height: 100%
+    background: tint($green, 40)

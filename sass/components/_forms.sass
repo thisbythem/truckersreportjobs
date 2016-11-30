@@ -26,6 +26,8 @@ input[type="radio"], input[type="checkbox"]
 
 input[type="submit"], button[type="submit"]
   +btn
+  &.secondary-button
+    +btn($brand-blue)
 
 $placeholder-color: $gray-dark
 
@@ -42,16 +44,52 @@ form
   :-ms-input-placeholder
     color: $placeholder-color
 
-.form-errors
+/// FORM PROMPTS & ERRORS
+.form-alert
+  +last-p
+  position: relative
   margin-bottom: 1.5rem
   padding: 1rem
   font-size: .875em
-  background: transparentize($red, .925)
-  color: darken($red, 35)
+  background: transparentize($blue, .925)
+  color: darken($blue, 15)
+  ul
+    margin: 1rem
+    &:last-child
+      margin-bottom: 0
   li
     @extend %bullet-list-style
     &::before
-      color: darken($red, 35)
+      color: darken($blue, 15)
+  &.alert-success
+    background: transparentize($green, .925)
+    color: darken($green, 15)
+    li
+      &::before
+        color: darken($green, 15)
+  &.alert-error
+    background: transparentize($red, .925)
+    color: darken($red, 35)
+    li
+      &::before
+        color: darken($red, 35)
+
+  &.add-close
+    padding-right: 2rem
+    .close-icon
+      +transition(opacity, .3s)
+      opacity: .5
+      display: block
+      +position(absolute, 4px 4px auto auto)
+      padding: .4rem
+      border: 2px solid transparentize($black, .65)
+      background: url("../images/icon-close.svg") no-repeat center center
+      background-size: 75%
+      cursor: pointer
+      &:hover
+        opacity: 1
+
+
 
 //// FORM MIXINS & EXTEND STYLES
 =select-block-style($sheight: 3em)
@@ -85,4 +123,4 @@ form
   margin: 0 0 .5rem
   font-family: $sans
   line-height: 1.1
-  color: $brand-blue    
+  color: $brand-blue
