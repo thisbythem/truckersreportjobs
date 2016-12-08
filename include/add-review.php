@@ -60,3 +60,10 @@
   <label>Summary of Cons</label>
   <textarea rows="2" placeholder="5 word minimum"></textarea>
 </fieldset>
+<fieldset class="radio-questions">
+  <h5>Currently employed at company?</h5>
+  <p>
+    <label><input type="radio"> <span>Yes</span></label>
+    <label><input type="radio" /> <span>No</span></label>
+  </p>
+</fieldset>

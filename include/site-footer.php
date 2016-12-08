@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row">
       <div class="sub-group">
-        <h3>About Truckers Report Job Reviews</h3>
+        <h3>About TruckersReport Job Reviews</h3>
         <p>Truckers Report Jobs is your free inside look at jobs and companies. Salary details, company reviews, and interview questions — all posted anonymously by employees and job seekers.</p>
       </div>
       <div class="sub-group social-links">
