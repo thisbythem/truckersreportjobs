@@ -24,6 +24,10 @@
           margin: 0
           +transform(translateY(-1px))
 
+  .no-content-cta
+    margin: 1rem 0 2rem
+    a
+      +btn
 
   .company-detail-header
     +section-padding-sm
@@ -114,7 +118,6 @@
     white-space: nowrap
     .anchor-nav
       @extend %small-heavy-caps
-      line-height: 1
     .actions
       a
         +btn
@@ -148,8 +151,18 @@
         a, span
           margin-right: 1rem
 
-  .company-detail-profile-salary
+  .company-detail-salary-media
     +section-padding-sm
+
+    .company-profile
+      +last-p
+      margin-bottom: 2rem
+      padding: 1rem
+      background: $gray-lightest
+      font-size: .875em
+      +media($smallScreenUp)
+        margin-left: -1rem
+
 
     li
       @extend %bullet-list-style
@@ -160,11 +173,8 @@
         &:last-child
           +shift(.5)
 
-  .company-detail-video-images
-    +section-padding-sm
-    border-top: 1px solid $gray-light
-
     .company-videos-wrap
+      margin-bottom: 2rem
       a
         +span-columns(6)
         +omega(2n)
@@ -187,6 +197,7 @@
       a
         +span-columns(4)
         +omega(3n)
+        margin-bottom: 1rem
         img
           +add-box-shadow(5px)
 
