@@ -1907,6 +1907,10 @@ form {
       transform: translateY(-1px); }
 .company-detail-page .no-content-cta {
   margin: 1rem 0 2rem; }
+  .company-detail-page .no-content-cta p {
+    margin: 0 0 1rem;
+    font-size: 0.875rem;
+    font-style: italic; }
   .company-detail-page .no-content-cta a {
     -webkit-transition: background-color 0.2s;
     -moz-transition: background-color 0.2s;
