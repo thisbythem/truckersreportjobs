@@ -124,13 +124,16 @@
     border-top: 1px solid $gray-light
     border-bottom: 1px solid $gray-light
     background: $off-white
-    white-space: nowrap
+
     .anchor-nav
       @extend %small-heavy-caps
     .actions
       a
         +btn
         +btn-small
+    +media($smallScreenDown)
+      .actions a
+        margin-bottom: 1rem
     +media($mediumScreenDown)
       .anchor-nav
         margin-bottom: 1rem

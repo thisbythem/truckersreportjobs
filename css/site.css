@@ -2013,8 +2013,7 @@ form {
   padding: 1rem 0;
   border-top: 1px solid #dbddde;
   border-bottom: 1px solid #dbddde;
-  background: #f8f8f8;
-  white-space: nowrap; }
+  background: #f8f8f8; }
   .company-detail-page .company-detail-anchor-nav .actions a {
     -webkit-transition: background-color 0.2s;
     -moz-transition: background-color 0.2s;
@@ -2027,6 +2026,9 @@ form {
       -moz-transition: background-color 0.2s;
       transition: background-color 0.2s;
       background-color: #ff7d28; }
+  @media screen and (max-width: 768px) {
+    .company-detail-page .company-detail-anchor-nav .actions a {
+      margin-bottom: 1rem; } }
   @media screen and (max-width: 980px) {
     .company-detail-page .company-detail-anchor-nav .anchor-nav {
       margin-bottom: 1rem; }
