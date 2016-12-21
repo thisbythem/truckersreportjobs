@@ -34,9 +34,6 @@
       <div class="container">
         <div class="anchor-nav">
           <div class="link-wrap">
-            <a href="#profile">Profile</a>
-            <a href="#salary">Salary</a>
-            <a href="#media">Videos & Images</a>
             <a href="#reviews">Reviews</a>
             <a href="#salary-surveys">Salary Surveys</a>
             <a href="#discussion">Discussion</a>
@@ -46,62 +43,10 @@
         <div class="actions">
           <a href="/add-full-review.php"><i class="fa fa-pencil-square-o"></i> Review an Employer</a>
           <a href="/add-salary-survey.php"><i class="fa fa-check-square-o"></i> Take a Salary Survey</a>
+          <!-- IF NO VIDEO OR PHOTO CONTENT, SHOW -->
+          <a href="/add-video-image.php"><i class="fa fa-plus"></i> Add Video</a>
+          <a href="/add-video-image.php"><i class="fa fa-plus"></i> Add Photo</a>
         </div>
-      </div>
-    </div>
-
-    <div class="company-detail-section company-detail-salary-media">
-      <div class="container">
-
-        <div class="sub-group company-detail-salary-profile">
-
-          <!-- IF PROFILE, SHOW BELOW -->
-          <div class="company-profile" id="profile">
-            <h4><i class="fa fa-circle"></i> Profile</h4>
-            <div class="no-content-cta">
-              <p>
-                Coming soon.
-              </p>
-            </div>
-
-          </div>
-          <!-- END PROFILE BOX-->
-
-          <h4 id="salary"><i class="fa fa-circle"></i> Salary</h4>
-          <div class="no-content-cta">
-            <p>
-              Coming soon.
-            </p>
-          </div>
-        </div>
-
-        <div class="sub-group company-detail-media" id="media">
-
-          <h4><i class="fa fa-circle"></i> Videos <a href="/add-video-image.php"><i class="fa fa-plus"></i> Add Video</a></h4>
-          <div class="row company-videos-wrap">
-            <a class="venobox" data-type="youtube" data-overlay="rgba(19,64,108,0.85)" href="https://youtu.be/YETb5VzLsJg" data-autoplay="true">
-              <img src="../images/temp-vid-slug-1.jpg" />
-              <span>Video Title Here</span>
-            </a>
-            <a class="venobox" data-type="youtube" data-overlay="rgba(19,64,108,0.85)" href="https://youtu.be/YtJwOoUYOwc" data-autoplay="true">
-              <img src="../images/temp-vid-slug-2.jpg" />
-              <span>Video Title Here</span>
-            </a>
-            <a class="venobox" data-type="youtube" data-overlay="rgba(19,64,108,0.85)" href="https://youtu.be/YtJwOoUYOwc" data-autoplay="true">
-              <img src="../images/temp-vid-slug-2.jpg" />
-              <span>Video Title Here</span>
-            </a>
-          </div>
-
-          <h4><i class="fa fa-circle"></i> Photos <a href="/add-video-image.php"><i class="fa fa-plus"></i> Add Photo</a></h4>
-
-          <!-- IF NO CONTENT, SHOW -->
-          <div class="no-content-cta">
-            <a href="/add-video-image.php"><i class="fa fa-plus"></i> Add Photo</a>
-          </div>
-
-        </div>
-
       </div>
     </div>
 

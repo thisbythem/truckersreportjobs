@@ -1939,7 +1939,6 @@ form {
   .company-detail-page .company-detail-header .company-rating-total {
     display: block;
     margin-top: 0.25rem;
-    text-align: right;
     font-size: 0.875em;
     font-style: italic;
     color: #9fa3a7; }
@@ -1962,11 +1961,14 @@ form {
     color: #13406d; }
     .company-detail-page .company-detail-header .rating-entry-wrap li:first-child {
       border-color: #13406d; }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 980px) {
+    .company-detail-page .company-detail-header .row {
+      margin: 0 auto;
+      max-width: 500px; }
     .company-detail-page .company-detail-header .rating-entry-wrap {
       margin-top: 1rem;
       font-size: 1.175em; } }
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 980px) {
     .company-detail-page .company-detail-header h2 {
       font-size: 3em; }
     .company-detail-page .company-detail-header .sub-group:first-child {
@@ -2004,7 +2006,9 @@ form {
       .company-detail-page .company-detail-header .company-info .company-name-contact:last-child {
         margin-right: 0; }
     .company-detail-page .company-detail-header .company-logo {
-      max-height: none; } }
+      max-height: none; }
+    .company-detail-page .company-detail-header .company-rating-total {
+      text-align: right; } }
 .company-detail-page .company-detail-anchor-nav {
   padding: 1rem 0;
   border-top: 1px solid #dbddde;
@@ -2023,7 +2027,7 @@ form {
       -moz-transition: background-color 0.2s;
       transition: background-color 0.2s;
       background-color: #ff7d28; }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 980px) {
     .company-detail-page .company-detail-anchor-nav .anchor-nav {
       margin-bottom: 1rem; }
       .company-detail-page .company-detail-anchor-nav .anchor-nav .link-wrap {
@@ -2047,15 +2051,13 @@ form {
           margin-right: 0; }
         .company-detail-page .company-detail-anchor-nav .anchor-nav a:nth-child(2n+1) {
           clear: left; } }
-  @media screen and (min-width: 768px) {
-    .company-detail-page .company-detail-anchor-nav .anchor-nav, .company-detail-page .company-detail-anchor-nav .actions {
-      display: inline-block;
-      vertical-align: middle;
-      white-space: normal;
-      width: 50%; }
+  @media screen and (min-width: 980px) {
+    .company-detail-page .company-detail-anchor-nav .anchor-nav {
+      float: left; }
     .company-detail-page .company-detail-anchor-nav .link-wrap {
-      display: inline-block; }
+      margin-top: 0.5rem; }
     .company-detail-page .company-detail-anchor-nav .actions {
+      float: right;
       text-align: right; }
       .company-detail-page .company-detail-anchor-nav .actions a {
         margin-left: 0.5rem; }
