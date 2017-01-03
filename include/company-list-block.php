@@ -3,7 +3,7 @@
 
     <div class="sub-group">
       <figure><img src="images/foley_services_logo.png" / class="company-logo"></figure>
-      <h3>Foley Carrier Services</h3>
+      <h3>Superior Bulk Logistics (Superior Carriers)</h3>
     </div>
 
     <div class="sub-group">

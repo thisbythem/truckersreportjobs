@@ -1234,6 +1234,10 @@ figure {
           .company-list-block .sub-group:first-child figure, .company-list-block .sub-group:first-child h3 {
             display: inline-block;
             vertical-align: middle; }
+          .company-list-block .sub-group:first-child h3 {
+            width: calc(100% - 11rem);
+            white-space: normal;
+            line-height: 1; }
           .company-list-block .sub-group:first-child figure {
             width: 7em; }
           .company-list-block .sub-group:first-child h3 {
