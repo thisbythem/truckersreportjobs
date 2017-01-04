@@ -43,36 +43,44 @@
           background: $brand-orange
           color: $white
     span
-      display: block
-      padding: 1rem
       font-size: .875em
       line-height: 1.3
-      +add-box-shadow(5px)
       &:first-of-type
-        background: $white
         color: $black
         text-align: left
       &:last-of-type
         +transition(background .3s, color .3s)
         @extend %small-heavy-caps
-        width: 100%
         text-align: center
-        background: $off-white
         color: $brand-orange
         letter-spacing: .025em
-        border-top: 1px solid $gray-lighter
 
     +media($mediumScreenDown)
       max-width: 26rem
-      margin: 0 auto 1.5rem
+      margin: 0 auto 1rem
+      padding: .5rem
+      background: $white
+      text-align: left
+      box-shadow: transparentize($black, .95) 0 0 15px 0
+      span
+        &:last-of-type
+          white-space: nowrap
 
     +media($mediumScreenUp)
       display: inline-block
       vertical-align: bottom
       width: calc(100% / 5 )
+      background: transparent
       span
+        +add-box-shadow(5px)
+        display: block
+        padding: 1rem
         &:first-of-type
+          background: $white
           font-size: .825em
+        &:last-of-type
+          background: $off-white
+          border-top: 1px solid $gray-lighter
 
       .job-link
         padding: .5rem
