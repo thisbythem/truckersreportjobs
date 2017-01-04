@@ -46,9 +46,6 @@
       line-height: 1
       color: $brand-blue
 
-    .rating
-      color: $yellow
-
     .company-rating-total
       display: block
       margin-top: .25rem
@@ -177,6 +174,10 @@
     li
       @extend %bullet-list-style
 
+    +media($mediumScreenDown)
+      .company-detail-salary-profile
+        margin-bottom: 1.5rem
+
     +media($mediumScreenUp)
       .sub-group
         +span-columns(5.75)
@@ -229,6 +230,25 @@
 
   .company-detail-reivews,
   .company-detail-discussion,
-  .company-detail-job-postings
+  .company-detail-job-postings.bottom-postings
     +section-padding-sm
     border-top: 1px solid $gray-light
+
+  .company-detail-job-postings.top-postings
+    +section-padding-sm
+    background: $gray-lighter
+    border-bottom: 1px solid $gray-light
+
+    .company-detail-jobs-wrap
+      white-space: nowrap
+      text-align: center
+    h3
+      margin: 0 0 1.5rem
+      font-weight: 800
+      text-align: center
+      color: $brand-blue
+      text-shadow: $gray-lighter 0 0 25px
+
+    +media($mediumScreenUp)
+      background: $gray-lighter url("../images/bg-trucks.svg") no-repeat center bottom
+      background-size: 100% auto

@@ -9,11 +9,11 @@
     <div class="sub-group">
       <div class="rating-wrap">
         <div class="rating-stars">
-          <i class="fa fa-star"></i>
-          <i class="fa fa-star"></i>
-          <i class="fa fa-star"></i>
-          <i class="fa fa-star"></i>
-          <i class="fa fa-star"></i>
+          <i class="fa fa-star star-on"></i>
+          <i class="fa fa-star star-on"></i>
+          <i class="fa fa-star-half-o star-on"></i>
+          <i class="fa fa-star-o"></i>
+          <i class="fa fa-star-o"></i>
         </div>
       </div>
       <span class="company-rating-total"><small>37 Reviews</small></span>

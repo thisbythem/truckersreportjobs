@@ -50,6 +50,19 @@
       </div>
     </div>
 
+    <div class="company-detail-section company-detail-job-postings top-postings" id="jobs">
+      <div class="container">
+        <h3>Find jobs at Heartland Express</h3>
+        <div class="company-detail-jobs-wrap row">
+          <?php include("include/company-detail-job-entry.php"); ?>
+          <?php include("include/company-detail-job-entry-2.php"); ?>
+          <?php include("include/company-detail-job-entry.php"); ?>
+          <?php include("include/company-detail-job-entry.php"); ?>
+        </div>
+      </div>
+    </div>
+
+
     <div class="company-detail-section company-detail-salary-media">
       <div class="container">
 
@@ -161,10 +174,10 @@
       </div>
     </div>
 
-    <div class="company-detail-section company-detail-job-postings" id="jobs">
+    <div class="company-detail-section company-detail-job-postings bottom-postings" id="jobs">
       <div class="container">
         <h4><i class="fa fa-circle"></i> Jobs</h4>
-        <div class="company-detail-discussion-wrap">
+        <div class="company-detail-jobs-wrap">
           <?php include("include/company-detail-job-entry.php"); ?>
           <?php include("include/company-detail-job-entry.php"); ?>
           <?php include("include/company-detail-job-entry.php"); ?>
