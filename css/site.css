@@ -502,7 +502,7 @@ th {
 .company-detail-salary-entry dt, .company-detail-review-entry .company-detail-review-entry-footer,
 .company-detail-review-entry .company-detail-salary-entry-footer,
 .company-detail-salary-entry .company-detail-review-entry-footer,
-.company-detail-salary-entry .company-detail-salary-entry-footer, .company-detail-discussion-entry .discussion-author, .company-detail-discussion-entry .company-detail-discussion-entry-footer, .company-detail-discussion-entry .entry-forum-link, .company-detail-job-postings.bottom-postings .company-detail-job-entry span:last-of-type, .company-detail-job-postings.top-postings .company-detail-job-entry span:last-of-type, .nav-search-results small, .company-list-block .read-more, .company-list-block .company-rating-total, .form-label-small, .form-add-review-salary label, .form-add-review-salary h5, .form-upload-box label, .form-upload-box h5, .user-entry-form .remember-me, .user-entry-form .form-links a, .site-nav,
+.company-detail-salary-entry .company-detail-salary-entry-footer, .company-detail-discussion-entry .discussion-author, .company-detail-discussion-entry .company-detail-discussion-entry-footer, .company-detail-discussion-entry .entry-forum-link, .company-detail-job-postings .company-detail-job-entry span:last-of-type, .nav-search-results small, .company-list-block .read-more, .company-list-block .company-rating-total, .form-label-small, .form-add-review-salary label, .form-add-review-salary h5, .form-upload-box label, .form-upload-box h5, .user-entry-form .remember-me, .user-entry-form .form-links a, .site-nav,
 .site-header-user-wrap, .site-footer .footer-nav a, .site-footer .copyright, .company-detail-page .company-detail-header .company-trailer-type span, .company-detail-page .company-detail-anchor-nav .anchor-nav, .all-companies-list-header form label {
   font-size: 0.675em;
   font-weight: 700;
@@ -1063,85 +1063,39 @@ figure {
       .company-detail-discussion-entry .sub-group:last-child:last-child {
         margin-right: 0; } }
 
-.company-detail-job-postings.bottom-postings .company-detail-job-entry {
+.company-detail-job-postings .company-detail-job-entry {
   max-width: 50em;
   margin: 0 auto;
   padding: 0.5rem;
   margin-top: 1.5rem;
   border: 1px solid #dbddde;
+  background: #ffffff;
   box-shadow: rgba(15, 25, 36, 0.05) 10px 0 50px 0; }
-  .company-detail-job-postings.bottom-postings .company-detail-job-entry span {
+  .company-detail-job-postings .company-detail-job-entry span {
     display: block;
-    line-height: 1.1; }
-    .company-detail-job-postings.bottom-postings .company-detail-job-entry span:first-of-type {
+    font-size: 0.875em;
+    line-height: 1.2; }
+    .company-detail-job-postings .company-detail-job-entry span:first-of-type {
       color: #13406d; }
-    .company-detail-job-postings.bottom-postings .company-detail-job-entry span:last-of-type {
+    .company-detail-job-postings .company-detail-job-entry span:last-of-type {
       margin-top: 0.5rem; }
   @media screen and (min-width: 768px) {
-    .company-detail-job-postings.bottom-postings .company-detail-job-entry {
+    .company-detail-job-postings .company-detail-job-entry {
       padding: 0; }
-      .company-detail-job-postings.bottom-postings .company-detail-job-entry .job-link {
+      .company-detail-job-postings .company-detail-job-entry .job-link {
         display: table;
         width: 100%;
         vertical-align: middle; }
-        .company-detail-job-postings.bottom-postings .company-detail-job-entry .job-link span {
+        .company-detail-job-postings .company-detail-job-entry .job-link span {
           display: table-cell;
           padding: 1rem; }
-          .company-detail-job-postings.bottom-postings .company-detail-job-entry .job-link span:first-of-type {
+          .company-detail-job-postings .company-detail-job-entry .job-link span:first-of-type {
             color: #13406d; }
-          .company-detail-job-postings.bottom-postings .company-detail-job-entry .job-link span:last-of-type {
+          .company-detail-job-postings .company-detail-job-entry .job-link span:last-of-type {
             width: 8rem;
             text-align: center;
             background: #ff6602;
             color: #ffffff; } }
-
-.company-detail-job-postings.top-postings .company-detail-job-entry .job-link {
-  display: block;
-  white-space: normal; }
-  .company-detail-job-postings.top-postings .company-detail-job-entry .job-link:hover span:last-of-type {
-    background: #ff6602;
-    color: #ffffff; }
-.company-detail-job-postings.top-postings .company-detail-job-entry span {
-  font-size: 0.875em;
-  line-height: 1.3; }
-  .company-detail-job-postings.top-postings .company-detail-job-entry span:first-of-type {
-    color: #0f1924;
-    text-align: left; }
-  .company-detail-job-postings.top-postings .company-detail-job-entry span:last-of-type {
-    -webkit-transition: background 0.3s, color 0.3s;
-    -moz-transition: background 0.3s, color 0.3s;
-    transition: background 0.3s, color 0.3s;
-    text-align: center;
-    color: #ff6602;
-    letter-spacing: 0.025em; }
-@media screen and (max-width: 980px) {
-  .company-detail-job-postings.top-postings .company-detail-job-entry {
-    max-width: 26rem;
-    margin: 0 auto 1rem;
-    padding: 0.5rem;
-    background: #ffffff;
-    text-align: left;
-    box-shadow: rgba(15, 25, 36, 0.05) 0 0 15px 0; }
-    .company-detail-job-postings.top-postings .company-detail-job-entry span:last-of-type {
-      white-space: nowrap; } }
-@media screen and (min-width: 980px) {
-  .company-detail-job-postings.top-postings .company-detail-job-entry {
-    display: inline-block;
-    vertical-align: bottom;
-    width: calc(100% / 5 );
-    background: transparent; }
-    .company-detail-job-postings.top-postings .company-detail-job-entry span {
-      box-shadow: rgba(15, 25, 36, 0.1) 5px 5px 0 0;
-      display: block;
-      padding: 1rem; }
-      .company-detail-job-postings.top-postings .company-detail-job-entry span:first-of-type {
-        background: #ffffff;
-        font-size: 0.825em; }
-      .company-detail-job-postings.top-postings .company-detail-job-entry span:last-of-type {
-        background: #f8f8f8;
-        border-top: 1px solid #e9eaeb; }
-    .company-detail-job-postings.top-postings .company-detail-job-entry .job-link {
-      padding: 0.5rem; } }
 
 .view-more-wrap {
   text-align: center;
@@ -2231,9 +2185,6 @@ form {
   @media screen and (min-width: 768px) {
     .company-detail-page .company-detail-job-postings.top-postings {
       padding: 3.5rem 0; } }
-  .company-detail-page .company-detail-job-postings.top-postings .company-detail-jobs-wrap {
-    white-space: nowrap;
-    text-align: center; }
   .company-detail-page .company-detail-job-postings.top-postings h3 {
     margin: 0 0 1.5rem;
     font-weight: 800;
