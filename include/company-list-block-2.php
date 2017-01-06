@@ -3,6 +3,9 @@
 
     <div class="sub-group">
       <figure><img src="images/heartland_logo.png" / class="company-logo"></figure>
+    </div>
+
+    <div class="sub-group">  
       <h3>Heartland Express</h3>
     </div>
 

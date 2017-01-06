@@ -1209,7 +1209,7 @@ figure {
   @media screen and (max-width: 768px) {
     .company-list-block {
       max-width: 24em;
-      margin: 0 auto 1.5rem; }
+      margin: 0 auto 1rem; }
       .company-list-block:after {
         content: "";
         display: table;
@@ -1217,8 +1217,8 @@ figure {
       .company-list-block .company-logo {
         max-height: 1.5rem; }
       .company-list-block h3 {
-        margin: 0.75rem 0 0.25rem; }
-      .company-list-block .sub-group:not(:first-child) {
+        margin: 0.75rem 0 0.5rem; }
+      .company-list-block .sub-group:nth-child(3), .company-list-block .sub-group:nth-child(4) {
         float: left;
         width: 50%; }
       .company-list-block .read-more {
@@ -1229,22 +1229,24 @@ figure {
       white-space: nowrap; }
       .company-list-block .company-logo {
         max-height: 2rem; }
+      .company-list-block .link-wrap {
+        display: table;
+        width: 100%; }
       .company-list-block .sub-group {
-        display: inline-block;
+        display: table-cell;
         vertical-align: middle;
-        width: 9rem; }
-        .company-list-block .sub-group:first-child {
-          width: calc(100% - 18rem); }
-          .company-list-block .sub-group:first-child figure, .company-list-block .sub-group:first-child h3 {
+        width: 20%; }
+        .company-list-block .sub-group:nth-child(2) {
+          width: 40%; }
+          .company-list-block .sub-group:nth-child(2) figure, .company-list-block .sub-group:nth-child(2) h3 {
             display: inline-block;
             vertical-align: middle; }
-          .company-list-block .sub-group:first-child h3 {
-            width: calc(100% - 11rem);
+          .company-list-block .sub-group:nth-child(2) h3 {
             white-space: normal;
             line-height: 1; }
-          .company-list-block .sub-group:first-child figure {
+          .company-list-block .sub-group:nth-child(2) figure {
             width: 7em; }
-          .company-list-block .sub-group:first-child h3 {
+          .company-list-block .sub-group:nth-child(2) h3 {
             margin: 0 0 0 1rem; } }
 
 fieldset {
