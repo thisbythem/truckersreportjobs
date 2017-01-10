@@ -1461,9 +1461,8 @@ form {
       .form-add-review-salary fieldset.with-rating p {
         margin-top: 0.5rem; }
       .form-add-review-salary fieldset.with-rating label {
-        display: inline-block;
-        margin: 0 0 0 0.5rem;
-        font-size: 0.675rem;
+        margin: 0.25rem 0 0 0;
+        font-size: 0.775rem;
         color: #7b8187; }
       .form-add-review-salary fieldset.with-rating p, .form-add-review-salary fieldset.with-rating .rating-wrap {
         float: left;
@@ -1474,6 +1473,11 @@ form {
           margin-right: 0; }
       .form-add-review-salary fieldset.with-rating .rating-stars {
         float: right; }
+      @media screen and (min-width: 768px) {
+        .form-add-review-salary fieldset.with-rating label {
+          display: inline-block;
+          margin: 0 0 0 0.5rem;
+          font-size: 0.675rem; } }
     .form-add-review-salary fieldset.two-up label, .form-add-review-salary fieldset.two-up p, .form-add-review-salary fieldset.two-up h5 {
       float: left;
       display: block;

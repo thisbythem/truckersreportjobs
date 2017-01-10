@@ -63,14 +63,18 @@
         @extend %small-heavy-caps
         margin-top: .5rem
       label
-        display: inline-block
-        margin: 0 0 0 .5rem
-        font-size: .675rem
+        margin: .25rem 0 0 0
+        font-size: .775rem
         color: $gray-dark
       p, .rating-wrap
         +span-columns(6)
       .rating-stars
         float: right
+      +media($smallScreenUp)
+        label
+          display: inline-block
+          margin: 0 0 0 .5rem
+          font-size: .675rem
     &.two-up
       label, p, h5
         +span-columns(6)
