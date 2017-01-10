@@ -59,9 +59,15 @@
       margin: .5rem 0
       padding-bottom: .5rem
       border-bottom: 1px dotted $gray-light
+      p
+        @extend %small-heavy-caps
+        margin-top: .5rem
       label
-        margin: .5rem 0 0
-      label, .rating-wrap
+        display: inline-block
+        margin: 0 0 0 .5rem
+        font-size: .675rem
+        color: $gray-dark
+      p, .rating-wrap
         +span-columns(6)
       .rating-stars
         float: right

@@ -502,7 +502,7 @@ th {
 .company-detail-salary-entry dt, .company-detail-review-entry .company-detail-review-entry-footer,
 .company-detail-review-entry .company-detail-salary-entry-footer,
 .company-detail-salary-entry .company-detail-review-entry-footer,
-.company-detail-salary-entry .company-detail-salary-entry-footer, .company-detail-discussion-entry .discussion-author, .company-detail-discussion-entry .company-detail-discussion-entry-footer, .company-detail-discussion-entry .entry-forum-link, .company-detail-job-postings .company-detail-job-entry span:last-of-type, .nav-search-results small, .company-list-block .read-more, .company-list-block .company-rating-total, .form-label-small, .form-add-review-salary label, .form-add-review-salary h5, .form-upload-box label, .form-upload-box h5, .user-entry-form .remember-me, .user-entry-form .form-links a, .site-nav,
+.company-detail-salary-entry .company-detail-salary-entry-footer, .company-detail-discussion-entry .discussion-author, .company-detail-discussion-entry .company-detail-discussion-entry-footer, .company-detail-discussion-entry .entry-forum-link, .company-detail-job-postings .company-detail-job-entry span:last-of-type, .nav-search-results small, .company-list-block .read-more, .company-list-block .company-rating-total, .form-label-small, .form-add-review-salary label, .form-add-review-salary h5, .form-upload-box label, .form-upload-box h5, .form-add-review-salary fieldset.with-rating p, .user-entry-form .remember-me, .user-entry-form .form-links a, .site-nav,
 .site-header-user-wrap, .site-footer .footer-nav a, .site-footer .copyright, .company-detail-page .company-detail-header .company-trailer-type span, .company-detail-page .company-detail-anchor-nav .anchor-nav, .all-companies-list-header form label {
   font-size: 0.675em;
   font-weight: 700;
@@ -1458,14 +1458,19 @@ form {
       margin: 0.5rem 0;
       padding-bottom: 0.5rem;
       border-bottom: 1px dotted #dbddde; }
+      .form-add-review-salary fieldset.with-rating p {
+        margin-top: 0.5rem; }
       .form-add-review-salary fieldset.with-rating label {
-        margin: 0.5rem 0 0; }
-      .form-add-review-salary fieldset.with-rating label, .form-add-review-salary fieldset.with-rating .rating-wrap {
+        display: inline-block;
+        margin: 0 0 0 0.5rem;
+        font-size: 0.675rem;
+        color: #7b8187; }
+      .form-add-review-salary fieldset.with-rating p, .form-add-review-salary fieldset.with-rating .rating-wrap {
         float: left;
         display: block;
         margin-right: 2.35765%;
         width: 48.82117%; }
-        .form-add-review-salary fieldset.with-rating label:last-child, .form-add-review-salary fieldset.with-rating .rating-wrap:last-child {
+        .form-add-review-salary fieldset.with-rating p:last-child, .form-add-review-salary fieldset.with-rating .rating-wrap:last-child {
           margin-right: 0; }
       .form-add-review-salary fieldset.with-rating .rating-stars {
         float: right; }

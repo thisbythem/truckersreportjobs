@@ -1,6 +1,6 @@
 <h4 class="section-header">Give your rating</h4>
 <fieldset class="with-rating">
-  <label>Overall</label>
+  <p>Overall</p>
   <div class="rating-wrap">
     <div class="rating-stars">
       <i class="fa fa-star"></i>
@@ -11,7 +11,7 @@
     </div>
 </fieldset>
 <fieldset class="with-rating">
-  <label>Home Time</label>
+  <p>Home Time <label class="checkbox"><input type="checkbox" /> N/A</label></p>
   <div class="rating-wrap">
     <div class="rating-stars">
       <i class="fa fa-star"></i>
@@ -22,7 +22,7 @@
     </div>
 </fieldset>
 <fieldset class="with-rating">
-  <label>Equipment and Maintenance</label>
+  <p>Equipment and Maintenance <label class="checkbox"><input type="checkbox" /> N/A</label></p>
   <div class="rating-wrap">
     <div class="rating-stars">
       <i class="fa fa-star"></i>
@@ -33,7 +33,7 @@
     </div>
 </fieldset>
 <fieldset class="with-rating">
-  <label>Dispatchers and Managers</label>
+  <p>Dispatchers and Managers <label class="checkbox"><input type="checkbox" /> N/A</label>
   <div class="rating-wrap">
     <div class="rating-stars">
       <i class="fa fa-star"></i>
