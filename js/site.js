@@ -6,6 +6,13 @@ $(document).ready(function () {
   });
 });
 
+$(document).ready(function () {
+  $(".review-toggle-button").click(function() {
+    $(this).toggleClass("on");
+    $(".review-response").toggleClass("open");
+  });
+});
+
 equalheight = function(container) {
 
   var currentTallest = 0,

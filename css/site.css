@@ -898,6 +898,35 @@ figure {
   .company-detail-review-entry .entry-review-content p,
   .company-detail-salary-entry .entry-review-content p {
     font-size: 0.875em; }
+  .company-detail-review-entry .entry-review-company-response h5,
+  .company-detail-salary-entry .entry-review-company-response h5 {
+    margin: 1rem 0 0.5rem;
+    font-weight: 600; }
+  .company-detail-review-entry .entry-review-company-response p,
+  .company-detail-salary-entry .entry-review-company-response p {
+    font-style: italic; }
+  .company-detail-review-entry .entry-review-company-response .review-toggle-button h5,
+  .company-detail-salary-entry .entry-review-company-response .review-toggle-button h5 {
+    cursor: pointer;
+    color: #13406d; }
+  .company-detail-review-entry .entry-review-company-response .review-toggle-button img,
+  .company-detail-salary-entry .entry-review-company-response .review-toggle-button img {
+    transition: transform 0.3s;
+    display: inline-block;
+    margin-right: 0.15rem;
+    height: 0.5em;
+    width: auto;
+    vertical-align: middle; }
+  .company-detail-review-entry .entry-review-company-response .review-toggle-button.on img,
+  .company-detail-salary-entry .entry-review-company-response .review-toggle-button.on img {
+    transform: rotate(180deg); }
+  .company-detail-review-entry .entry-review-company-response .review-response,
+  .company-detail-salary-entry .entry-review-company-response .review-response {
+    height: 0;
+    overflow: hidden; }
+    .company-detail-review-entry .entry-review-company-response .review-response.open,
+    .company-detail-salary-entry .entry-review-company-response .review-response.open {
+      height: auto; }
   .company-detail-review-entry .company-detail-review-entry-footer,
   .company-detail-review-entry .company-detail-salary-entry-footer,
   .company-detail-salary-entry .company-detail-review-entry-footer,
@@ -949,6 +978,15 @@ figure {
       width: 18.96686%; }
       .company-detail-review-entry .entry-pros-cons:last-child,
       .company-detail-salary-entry .entry-pros-cons:last-child {
+        margin-right: 0; }
+    .company-detail-review-entry .entry-review-content,
+    .company-detail-salary-entry .entry-review-content {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 44.55627%; }
+      .company-detail-review-entry .entry-review-content:last-child,
+      .company-detail-salary-entry .entry-review-content:last-child {
         margin-right: 0; }
     .company-detail-review-entry .content-wrap,
     .company-detail-salary-entry .content-wrap {

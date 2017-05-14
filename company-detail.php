@@ -139,8 +139,8 @@
     <div class="company-detail-section company-detail-reivews" id="reviews">
       <div class="container">
         <h4><i class="fa fa-circle"></i> Reviews <a href="/add-full-review.php"><i class="fa fa-plus"></i> Review this Company</a></h4>
-        <?php include("include/company-detail-review-entry.php"); ?>
-        <?php include("include/company-detail-review-entry.php"); ?>
+        <?php include("include/company-detail-review-entry-2.php"); ?>
+        <?php include("include/company-detail-review-entry-3.php"); ?>
         <?php include("include/company-detail-review-entry.php"); ?>
         <div class="view-more-wrap">
           <a href="#">View More Reviews</a>

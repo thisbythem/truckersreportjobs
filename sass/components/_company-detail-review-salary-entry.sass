@@ -34,6 +34,33 @@
     p
       font-size: .875em
 
+  .entry-review-company-response
+    h5
+      margin: 1rem 0 .5rem
+      font-weight: 600
+    p
+      font-style: italic
+
+    .review-toggle-button
+      h5
+        cursor: pointer
+        color: $brand-blue
+      img
+        transition: transform .3s
+        display: inline-block
+        margin-right: .15rem
+        +size(auto .5em)
+        vertical-align: middle
+      &.on
+        img
+          transform: rotate(180deg)
+
+    .review-response
+      height: 0
+      overflow: hidden
+      &.open
+        height: auto
+
   .company-detail-review-entry-footer,
   .company-detail-salary-entry-footer
     +clearfix
@@ -58,6 +85,8 @@
       +span-columns(2.5)
     .entry-pros-cons
       +span-columns(2.5)
+    .entry-review-content
+      +span-columns(5.5)
 
     .content-wrap
       padding: 2rem
