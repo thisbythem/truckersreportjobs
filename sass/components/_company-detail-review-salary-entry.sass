@@ -34,11 +34,35 @@
     p
       font-size: .875em
 
+  .entry-review-company-response-large
+    +last-p
+    padding: 1rem
+    border-top: 1px solid $gray-light
+    background: tint($off-white, 50)
+
+    h5
+      margin: 0 0 .5rem
+      font-weight: 600
+      color: $brand-blue
+    p
+      margin-bottom: 1rem
+      font-style: italic
+      font-size: .875em
+
+    .response-content
+      max-width: 36em
+
+    +media($smallScreenUp)
+      padding: 2rem
+
+
   .entry-review-company-response
+    +last-p
     h5
       margin: 1rem 0 .5rem
       font-weight: 600
     p
+      margin-bottom: 1rem
       font-style: italic
 
     .review-toggle-button

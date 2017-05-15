@@ -898,12 +898,41 @@ figure {
   .company-detail-review-entry .entry-review-content p,
   .company-detail-salary-entry .entry-review-content p {
     font-size: 0.875em; }
+  .company-detail-review-entry .entry-review-company-response-large,
+  .company-detail-salary-entry .entry-review-company-response-large {
+    padding: 1rem;
+    border-top: 1px solid #dbddde;
+    background: #fcfcfc; }
+    .company-detail-review-entry .entry-review-company-response-large p:last-of-type,
+    .company-detail-salary-entry .entry-review-company-response-large p:last-of-type {
+      margin-bottom: 0; }
+    .company-detail-review-entry .entry-review-company-response-large h5,
+    .company-detail-salary-entry .entry-review-company-response-large h5 {
+      margin: 0 0 0.5rem;
+      font-weight: 600;
+      color: #13406d; }
+    .company-detail-review-entry .entry-review-company-response-large p,
+    .company-detail-salary-entry .entry-review-company-response-large p {
+      margin-bottom: 1rem;
+      font-style: italic;
+      font-size: 0.875em; }
+    .company-detail-review-entry .entry-review-company-response-large .response-content,
+    .company-detail-salary-entry .entry-review-company-response-large .response-content {
+      max-width: 36em; }
+    @media screen and (min-width: 768px) {
+      .company-detail-review-entry .entry-review-company-response-large,
+      .company-detail-salary-entry .entry-review-company-response-large {
+        padding: 2rem; } }
+  .company-detail-review-entry .entry-review-company-response p:last-of-type,
+  .company-detail-salary-entry .entry-review-company-response p:last-of-type {
+    margin-bottom: 0; }
   .company-detail-review-entry .entry-review-company-response h5,
   .company-detail-salary-entry .entry-review-company-response h5 {
     margin: 1rem 0 0.5rem;
     font-weight: 600; }
   .company-detail-review-entry .entry-review-company-response p,
   .company-detail-salary-entry .entry-review-company-response p {
+    margin-bottom: 1rem;
     font-style: italic; }
   .company-detail-review-entry .entry-review-company-response .review-toggle-button h5,
   .company-detail-salary-entry .entry-review-company-response .review-toggle-button h5 {
